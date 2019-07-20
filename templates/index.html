@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  {% include "js_declaration.js" %}
+  {% include "style.css" %}
+</head>
+<body>
+  <p>
+    <button onclick="showCode()">Show Python</button>
+    <button onclick="runCode()" id="runcode">Run Python</button>
+    <button onclick="save()" id="save">Save Combination</button>
+    <button onclick="restore()" id="restore">Restore</button>
+    {% csrf_token %}
+  </p>
+
+  <div id="blocklyDiv" style="height: 480px; width: 1000px;"></div>
+    <xml id="toolbox" style="display: none">
+
+      <category name="Logic" colour="%{BKY_LOGIC_HUE}">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="do_it"></block>
+      </category>
+
+      <category name="Loops" colour="%{BKY_LOOPS_HUE}">
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <block type="math_number">
+              <field name="NUM">10</field>
+            </block>
+          </value>
+        </block>
+        <block type="controls_whileUntil"></block>
+      </category>
+
+      <category name="Math" colour="%{BKY_MATH_HUE}">
+        <block type="math_number">
+          <field name="NUM">123</field>
+        </block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+      </category>
+
+      <category name="Text" colour="%{BKY_TEXTS_HUE}">
+        <block type="text"></block>
+        <block type="text_length"></block>
+        <block type="text_print"></block>
+      </category>
+
+      <category name="Sensors" colour="%{BKY_MATH_HUE}">
+        {% include "sensor_declaration.html" %}
+      </category>
+
+      <category name="Actuators" colour="%{BKY_MATH_HUE}">
+        {% include "actuator_declaration.html" %}
+      </category>
+
+      <category name="Email" colour="%{BKY_TEXTS_HUE}">
+        {% include "mailbox_declaration.html" %}        
+      </category>
+
+      <category name="API" colour="%{BKY_TEXTS_HUE}">
+        {% include "api_declaration.html" %}        
+      </category>
+
+    </xml>
+    
+  <script>
+
+    var demoWorkspace = Blockly.inject('blocklyDiv',
+        {media: 'blockly/media/',toolbox: document.getElementById('toolbox')});
+    function showCode() {
+      Blockly.Python.INFINITE_LOOP_TRAP = null;
+      var code = Blockly.Python.workspaceToCode(demoWorkspace);
+      alert(code);
+    }
+    function save(){
+      if (typeof(Storage)!=="undefined")
+      {
+        var xml = Blockly.Python.workspaceToDom(Blockly.demoWorkspace);
+        localStorage.setItem(document.getElementById("blocklyDiv").value,Blockly.Python.domToText( xml ));
+        Blockly.demoWorkspace.clear();
+      }
+      else{
+        alart("error in save");
+      }
+    }
+    function restore(){
+      Blockly.demoWorkspace.clear()
+      var nameOfTheProject = document.getElementById("blocklyDiv").value;
+      if (typeof(Storage)!=="undefined"){
+        if (localStorage.data!=null){
+          var xml = Blockly.Python.textToCode(localStorage.getItem(nameOfTheProject));
+            Blockly.Python.domToWorkspace(Blockly.demoWorkspace,xml);
+        }
+        else{
+          alart("nothing to restore");
+        }
+      }
+    }
+    function runCode(){
+          Blockly.Python.INFINITE_LOOP_TRAP = null;
+          var code = Blockly.Python.workspaceToCode(demoWorkspace);
+            $.ajax({
+            type: 'POST',
+            url: "/get_motor_status/",
+            headers:{
+              "X-CSRFToken": $("input[name=csrfmiddlewaretoken]").val()
+            },
+            data: {'code': code},
+            success: function(response) {
+                console.log(response.code);
+            }
+          });
+    }
+    {% include "blocks.js" %}
+  </script>
+</body>
+</html>
