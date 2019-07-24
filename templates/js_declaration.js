@@ -6,17 +6,18 @@
 <script src="{% static 'blockly/msg/js/en.js' %} "></script>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 
+<script src="static/js/generators/codegenerator-Label.js"></script>
+<script src="static/js/generators/codegenerator-Read.js"></script>
+<script src="static/js/generators/codegenerator-Send.js"></script>
+<script src="static/js/generators/codegenerator-Search.js"></script>
+
+
+
+
+
 <script src="static/js/generators/codegenerator-temperature_checker.js"></script>
 
-<script src="static/js/generators/codegenerator-Test.js"></script>
-
-<script src="static/js/generators/codegenerator-Test_Label.js"></script>
-
-<script src="static/js/generators/codegenerator-Test_Read.js"></script>
-
-<script src="static/js/generators/codegenerator-Test_Send.js"></script>
-
-<script src="static/js/generators/codegenerator-Test_Search.js"></script>
+<script src="static/js/generators/codegenerator-Rajon.js"></script>
 
 <script src="static/js/generators/codegenerator-FirstAPI.js"></script>
 
