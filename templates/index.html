@@ -120,12 +120,12 @@
             },
             data: {'code': code},
             success: function(response) {
-                console.log(response.code);
+                $("#message").text(JSON.stringify(response.code));
             }
           });
     }
     {% include "blocks.js" %}
   </script>
-
+<p id="message"></p>
 </body>
 </html>

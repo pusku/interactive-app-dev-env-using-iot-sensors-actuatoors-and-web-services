@@ -1,4 +1,7 @@
 from __future__ import print_function
+
+import json
+from django.http import HttpResponse, JsonResponse
 from googleapiclient import errors
 from httplib2 import Http
 from oauth2client import file, client, tools
@@ -87,7 +90,6 @@ def Search(param, param2, param3):
 
 
 def Label(param):
-    print(param[0])
     creds = None
     if os.path.exists('token' + param[1] + '.pickle'):
         with open('token' + param[1] + '.pickle', 'rb') as token:
@@ -105,13 +107,7 @@ def Label(param):
     service = build('gmail', 'v1', credentials=creds)
     results = service.users().labels().list(userId='me').execute()
     labels = results.get('labels', [])
-
-    if not labels:
-        print('No labels found.')
-    else:
-        print('Labels:')
-        for label in labels:
-            print(label['name'])
+    return labels
 
 
 class auth:
