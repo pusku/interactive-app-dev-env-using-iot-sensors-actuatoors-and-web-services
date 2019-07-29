@@ -57,10 +57,14 @@ def Read(param, param2):
     if not messages:
         print("No messages found.")
     else:
+        list = []
         print("Message snippets:")
         for message in messages:
             msg = service.users().messages().get(userId='me', id=message['id']).execute()
             print(msg['snippet'])
+            list.append(msg['snippet'])
+
+        return list
 
 
 def Search(param, param2, param3):
@@ -84,9 +88,12 @@ def Search(param, param2, param3):
         print("No messages found.")
     else:
         print("Message snippets:")
+        list = []
         for message in messages:
             msg = service.users().messages().get(userId='me', id=message['id']).execute()
             print(msg['snippet'])
+            list.append(msg['snippet'])
+        return list
 
 
 def Label(param):
@@ -107,7 +114,12 @@ def Label(param):
     service = build('gmail', 'v1', credentials=creds)
     results = service.users().labels().list(userId='me').execute()
     labels = results.get('labels', [])
-    return labels
+    list = []
+    for label in labels:
+        list.append(label['name'])
+        # list.append('\\n\\n')
+    print(list)
+    return list
 
 
 class auth:
@@ -185,8 +197,9 @@ class SendEMail:
     def send_message(self, user_id, message):
         try:
             message = (self.service.users().messages().send(userId=user_id, body=message).execute())
-            print('Message Id: %s' % message['id'])
-            return message
+            list = 'Message Successfully Sent!\nMessage Id: %s' % message['id']
+            print(list)
+            return list
         except errors.HttpError as error:
             print('An error occurred: %s' % error)
 
@@ -201,7 +214,8 @@ def Send(param, param2, param3, param4, param5):
     service = discovery.build('gmail', 'v1', http=http)
     sendInst = SendEMail(service)
     message = sendInst.create_message(param2, param3, param4, param5)
-    sendInst.send_message('me', message)
+    list = sendInst.send_message('me', message)
+    return list
 
 
 def temperature_checker():

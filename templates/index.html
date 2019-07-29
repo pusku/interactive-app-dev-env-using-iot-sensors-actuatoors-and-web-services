@@ -120,12 +120,14 @@
             },
             data: {'code': code},
             success: function(response) {
-                $("#message").text(JSON.stringify(response.code));
+                console.log(response.code)
+                document.getElementById("json").innerHTML = JSON.stringify(response.code, undefined, 2);
+                {#$("#message").text(JSON.stringify(response.code));#}
             }
           });
     }
     {% include "blocks.js" %}
   </script>
-<p id="message"></p>
+<pre id="json"></pre>
 </body>
 </html>
