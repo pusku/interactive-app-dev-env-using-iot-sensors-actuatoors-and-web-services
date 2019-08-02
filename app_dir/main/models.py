@@ -63,7 +63,8 @@ class MailBox(models.Model):
 
 class API(models.Model):
     name = models.CharField(max_length=100, null=True)
-    api = models.FileField(upload_to="api", null=True, blank=True)
+    api = models.CharField(max_length=100, null=True)
+    fields = models.TextField(max_length=500, null=True)
 
     class Meta:
         verbose_name_plural = 'API'

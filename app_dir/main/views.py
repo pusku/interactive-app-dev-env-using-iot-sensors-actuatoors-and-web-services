@@ -40,11 +40,12 @@ def home(request):
                     "name": "1"
                 }
                 requests.post(url, data=data)
+
     # MailBox Creator
     mailboxes = MailBox.objects.all()
-    mailBoxlen = mailboxes.count()
-    if (mailBoxlen) > 0:
-        last_mailbox = mailboxes[mailBoxlen - 1]
+    mailbox_len = mailboxes.count()
+    if mailbox_len > 0:
+        last_mailbox = mailboxes[mailbox_len - 1]
         read_mailbox = open('last_mailbox.txt', 'r')
         mailbox_a = read_mailbox.read()
         read_mailbox.close()
@@ -63,18 +64,21 @@ def home(request):
     api = requests.get("http://127.0.0.1:8000/api/api/").json()
     if len(api) > 0:
         last_api = api[-1]
+        print(last_api)
         read_api = open('last_api.txt', 'r')
         api_a = read_api.read()
         read_api.close()
         api_name = last_api['name']
-        api_tag = api_name
+        # api_tag = api_name
+        api_link = last_api['api']
+        api_fields = last_api['fields']
         api_name = api_name.replace(".", "_")
         if int(api_a) < last_api['id']:
             write_file = open('last_api.txt', 'w+')
             write_file.write(str(last_api['id']))
             write_file.close()
-            function_writer.api_function_writer(api_name, api_tag)
-            block_generator.block_generator(api_name, 'api')
+            function_writer.api_function_writer(api_name, api_link, api_fields)
+            block_generator.api_block_generator(api_name, 'api', api_fields)
 
     return render(request, 'index.html')
 

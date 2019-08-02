@@ -231,48 +231,6 @@ def temperature_checker():
     return (data)
 
 
-def fgdfg():
-    path = 'mailbox/credentials_96vxMUp.json'
-    result = path.split('/')
-    print(result)
-    return result
-
-
-def FirstAPI_Post(param, param2):
-    data = requests.get("http://127.0.0.1:8000/api/api/").json()
-    data = {
-        param: param2,
-    }
-
-    response = requests.post(url, data=data)
-    return response
-
-
-def FirstAPI_Get(param):
-    data = requests.get("http://127.0.0.1:8000/api/api/param").json()
-    print(data)
-    return (data)
-
-
-def FirstAPI_Search(param):
-    data = requests.get("http://127.0.0.1:8000/api/api/param").json()
-    print(data)
-    return (data)
-
-
-def temperature_checker():
-    empty_list = []
-    sensor_tag = temperature_checker
-    data = requests.get("http://127.0.0.1:8000/api/sensors/").json()
-    for i in data:
-        if i['topic'] == sensor_tag:
-            empty_list.append(i)
-    data = empty_list[-1]
-    print(data)
-    data = int(data['value'])
-    return (data)
-
-
 def Rajon():
     path = 'mailbox/credentials.json'
     result = path.split('/')
@@ -280,23 +238,101 @@ def Rajon():
     return result
 
 
-def FirstAPI_Post(param, param2):
-    data = requests.get("http://127.0.0.1:8000/api/api/").json()
+def place_finder(param):
+    import requests
+    data = requests.get(
+        "https://places.cit.api.here.com/places/v1/autosuggest?at=23.74330,90.38410&q=" + param + "&app_id=GfI9VcTZloHQmA3LLcR5&app_code=z92kABIi3ZwEZ_VONCJLEQ").json()
+    print(data)
+    return data
+
+
+def news():
+    import requests
+    url = requests.get(
+        'https://newsapi.org/v2/top-headlines?q=Apple&from=2019-08-01&sortBy=popularity&sources=bbc-news&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c').json()
+    print(url)
+    return url
+
+
+def weather_info(city=None):
+    api_key = "bd27419d66c8678613e978ca561ad3f7"
+    url = "http://api.openweathermap.org/data/2.5/forecast?APPID={}".format(api_key) + "&q=" + city
+    data = requests.get(url).json()
+
+    # data = data['weather']
+    # print(data['name'])
+    # print(json.dumps(data, indent = 4, sort_keys=True))
+
+    data = (data['list'][0]['main']['temp'])
+    print(data)
+    return data
+
+
+def action_motor(motor_status):
+    url = 'http://127.0.0.1:8000/api/actuators/9/'
+
     data = {
-        param: param2,
+
+        "topic": "mc101",
+        "value": motor_status,
+        "time": "2019-01-24T13:35:24.246226Z",
+        "name": "1"
     }
 
-    response = requests.post(url, data=data)
-    return response
+    # Call REST API
+    response = requests.put(url, data=data)
+
+    # Print Response
+    print(response.text)
 
 
-def FirstAPI_Get(param):
-    data = requests.get("http://127.0.0.1:8000/api/api/param").json()
+def get_lowersensor():
+    empty_list = []
+    sensor_tag = 'soil_moisture_sensor::2.33::21.22::sayeed'
+    data = requests.get("http://127.0.0.1:8000/api/lowersensors/").json()
+    for i in data:
+        if i['topic'] == sensor_tag:
+            empty_list.append(i)
+
+    data = empty_list[-1]
     print(data)
+
+    data = int(data['value'])
     return (data)
 
 
-def FirstAPI_Search(param):
-    data = requests.get("http://127.0.0.1:8000/api/api/param").json()
+def value_to_print(text):
+    print(text + " pass function")
+    return text
+
+
+def print_content(what_to_print):
+    what_to_print = what_to_print + " print_content"
+    print(what_to_print)
+
+
+def weather_test(param0):
+    data = requests.get(
+        " https://samples.openweathermap.org/data/2.5/weather?q=" + param0 + "&appid=b6907d289e10d714a6e88b30761fae22 ").json()
     print(data)
-    return (data)
+    return data
+
+
+def recipe_puppy(param0, param1, param2, ):
+    data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
+    print(data)
+    return data
+
+
+def newspaper_headlines(param0, param1, param2, ):
+    data = requests.get(
+        " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    print(data)
+    return data
+
+
+def cricket(param0, param1, param2):
+    data = requests.get(
+        " https://dev132-cricket-live-scores-v1.p.rapidapi.com/matches.php?completedlimit=" + param0 + "&inprogresslimit=" + param1 + "&upcomingLimit=" + param2 + "&appid=dc0613934dmsh24f397f54e7f03bp19870ejsncb99ec04982d ").json()
+    print(data)
+    return data

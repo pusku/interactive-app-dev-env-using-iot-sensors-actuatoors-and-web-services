@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  {% include "js_declaration.js" %}
+  {% include "js_declaration.html" %}
   {% include "style.css" %}
 </head>
 <body>
@@ -52,6 +52,8 @@
         <block type="text"></block>
         <block type="text_length"></block>
         <block type="text_print"></block>
+        <block type="print_content"></block>
+        <block type="value_to_print"></block>
       </category>
 
       <category name="Sensors" colour="%{BKY_MATH_HUE}">
@@ -120,7 +122,6 @@
             },
             data: {'code': code},
             success: function(response) {
-                console.log(response.code)
                 document.getElementById("json").innerHTML = JSON.stringify(response.code, undefined, 2);
                 {#$("#message").text(JSON.stringify(response.code));#}
             }

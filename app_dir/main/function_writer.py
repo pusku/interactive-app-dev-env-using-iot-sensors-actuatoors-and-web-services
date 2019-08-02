@@ -54,33 +54,38 @@ def """ + function_name + """():
     file.close()
 
 
-def api_function_writer(function_name, tag):
+def api_function_writer(function_name, api_link, api_fields):
+    result = api_fields.split(',')
+    res_len = len(result)
+    c = 0
+    for i in result:
+        is_there_data = i.split('=')
+        if len(is_there_data) > 1:
+            c = c + 1
+    param_should = res_len - c
+    parameter = ""
+    parameter_val = "param"
+    for p in range(param_should):
+        parameter += parameter_val + str(p) + ','
+    final_param = parameter.rstrip(',')
+    print(final_param)
+    fields = ""
+    counter = 0
+    for i in result:
+        is_there_data = i.split('=')
+        if len(is_there_data) > 1:
+            fields += i + "&"
+        else:
+            fields += i + '=" +' + ' param' + str(counter) + ' + "&'
+            counter += 1
+    print(fields)
+    final_fields = fields.rstrip('&')
     file = open("app_dir/main/generated_functions.py", "a+")
     code = """
-def """ + function_name + "_Post" + """(param, param2):
-    data = requests.get("http://127.0.0.1:8000/api/api/").json()
-    data = {
-		param: param2,
-    }
-    
-	response = requests.post(url, data=data)
-	return response
-	
-	
-    
-def """ + function_name + "_Get" + """(param):
-    data = requests.get("http://127.0.0.1:8000/api/api/param").json()
+def """ + function_name + """(""" + final_param + """):
+    data = requests.get(" """ + api_link + final_fields + """ ").json()
     print(data)
-    return(data)
-    
-    
-
-def """ + function_name + "_Search" + """(param):
-    data = requests.get("http://127.0.0.1:8000/api/api/param").json()
-    print(data)
-    return(data)
-    
-    
+    return data
 """
     file.write(code)
     file.close()

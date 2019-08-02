@@ -29,4 +29,4 @@ class MailBoxSerializer(serializers.ModelSerializer):
 class APISerializer(serializers.ModelSerializer):
     class Meta:
         model = API
-        fields = ('id', 'name', 'api')
+        fields = ('id', 'name', 'api', 'fields')
