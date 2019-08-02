@@ -242,4 +242,23 @@ Blockly.Blocks['newspaper_headlines'] = {
               this.setHelpUrl("");
               }
             };
+
+             Blockly.Blocks['doctor'] = {
+                init: function() {
+               this.appendValueInput("param0")
+                      .setCheck(null)
+                      .setAlign(Blockly.ALIGN_CENTRE)
+                    .appendField('doctor location');
+                   this.appendValueInput("param1")
+                          .setCheck(null)
+                    .appendField('skip');
+                    this.appendValueInput("param2")
+                          .setCheck(null)
+                    .appendField('limit');
+                    this.setPreviousStatement(true, null);
+                  this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
          

@@ -30,7 +30,6 @@ def api_block_generator(block_name, block_type, api_fields):
                       .setAlign(Blockly.ALIGN_CENTRE)
                     .appendField('""" + block_name + " " + i + """');
                    """
-                    else_counter += 1
                     counter2 += 1
                 else:
                     append_field += """this.appendValueInput("param""" + str(else_counter+1) + """")

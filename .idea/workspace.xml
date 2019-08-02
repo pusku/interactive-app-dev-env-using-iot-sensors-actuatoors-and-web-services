@@ -2,38 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff9ba536-f3b2-43ab-bb40-ec422f126d3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-do_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-lowersensor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-motor-off.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-motor-on.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-place_finder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-print_content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-uppersensor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-value_to_print.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-weather.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/block_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/block_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/function_writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/function_writer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/generated_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/generated_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/last_api.txt" beforeDir="false" afterPath="$PROJECT_DIR$/last_api.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/last_sensor_actuator.txt" beforeDir="false" afterPath="$PROJECT_DIR$/last_sensor_actuator.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-FirstAPI_Get.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-FirstAPI_Post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-FirstAPI_Search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-temperature_checker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/actuator_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/actuator_declaration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/api_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/api_declaration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blocks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/js_declaration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mailbox_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mailbox_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sensor_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sensor_declaration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/js_declaration.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/blocks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="225" lean-forward="true" selection-start-line="225" selection-end-line="225" />
+            <state relative-caret-position="456">
+              <caret line="244" selection-start-line="244" selection-end-line="244" />
             </state>
           </provider>
         </entry>
@@ -58,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_dir/main/block_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+            <state relative-caret-position="344">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -67,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
+            <state relative-caret-position="473">
+              <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -77,10 +53,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/api_declaration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="85">
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -95,19 +80,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-newspaper_headlines.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/js_declaration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+            <state relative-caret-position="493">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -125,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/last_api.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -179,14 +155,14 @@
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-cricket.js" />
         <option value="$PROJECT_DIR$/app_dir/main/block_generator.py" />
         <option value="$PROJECT_DIR$/templates/blocks.js" />
-        <option value="$PROJECT_DIR$/templates/js_declaration.html" />
         <option value="$PROJECT_DIR$/templates/api_declaration.html" />
+        <option value="$PROJECT_DIR$/templates/js_declaration.html" />
         <option value="$PROJECT_DIR$/last_api.txt" />
         <option value="$PROJECT_DIR$/app_dir/main/generated_functions.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="56" />
     <option name="y" value="-8" />
     <option name="width" value="1872" />
@@ -207,6 +183,32 @@
             <path>
               <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
               <item name="middleware" type="462c0819:PsiDirectoryNode" />
+              <item name=".media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+              <item name=".media" type="462c0819:PsiDirectoryNode" />
+              <item name="mailbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+              <item name=".media" type="462c0819:PsiDirectoryNode" />
+              <item name="mailbox" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+              <item name=".media" type="462c0819:PsiDirectoryNode" />
+              <item name="mailbox" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="mailbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
               <item name="app_dir" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -214,6 +216,11 @@
               <item name="middleware" type="462c0819:PsiDirectoryNode" />
               <item name="app_dir" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
@@ -317,12 +324,12 @@
       <workItem from="1564582040822" duration="625000" />
       <workItem from="1564669063735" duration="18535000" />
       <workItem from="1564725705369" duration="2751000" />
-      <workItem from="1564733033625" duration="6900000" />
+      <workItem from="1564733033625" duration="8035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44070000" />
+    <option name="totallyTimeSpent" value="45205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,7 +350,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49944812" weight="0.32978722" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" weight="0.20319149" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" visible="true" weight="0.35531914" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
@@ -375,13 +382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -511,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/email_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -539,45 +532,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/block_generator.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js_declaration.html">
+    <entry file="file://$PROJECT_DIR$/app_dir/main/block_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+        <state relative-caret-position="344">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blocks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="225" lean-forward="true" selection-start-line="225" selection-end-line="225" />
+        <state relative-caret-position="456">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/api_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/js_declaration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/last_api.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
+        <state relative-caret-position="473">
+          <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>

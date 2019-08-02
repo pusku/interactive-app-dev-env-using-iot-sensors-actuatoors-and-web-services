@@ -336,3 +336,10 @@ def cricket(param0, param1, param2):
         " https://dev132-cricket-live-scores-v1.p.rapidapi.com/matches.php?completedlimit=" + param0 + "&inprogresslimit=" + param1 + "&upcomingLimit=" + param2 + "&appid=dc0613934dmsh24f397f54e7f03bp19870ejsncb99ec04982d ").json()
     print(data)
     return data
+
+
+def doctor(param0, param1, param2):
+    data = requests.get(
+        " https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='f1cfb7c347456d9d8f031b4d9000f958'").json()
+    print(data)
+    return data
