@@ -231,38 +231,10 @@ def temperature_checker():
     return (data)
 
 
-def Rajon():
-    path = 'mailbox/credentials.json'
-    result = path.split('/')
-    print(result)
-    return result
-
-
-def place_finder(param):
-    import requests
-    data = requests.get(
-        "https://places.cit.api.here.com/places/v1/autosuggest?at=23.74330,90.38410&q=" + param + "&app_id=GfI9VcTZloHQmA3LLcR5&app_code=z92kABIi3ZwEZ_VONCJLEQ").json()
-    print(data)
-    return data
-
-
-def news():
-    import requests
-    url = requests.get(
-        'https://newsapi.org/v2/top-headlines?q=Apple&from=2019-08-01&sortBy=popularity&sources=bbc-news&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c').json()
-    print(url)
-    return url
-
-
 def weather_info(city=None):
     api_key = "bd27419d66c8678613e978ca561ad3f7"
     url = "http://api.openweathermap.org/data/2.5/forecast?APPID={}".format(api_key) + "&q=" + city
     data = requests.get(url).json()
-
-    # data = data['weather']
-    # print(data['name'])
-    # print(json.dumps(data, indent = 4, sort_keys=True))
-
     data = (data['list'][0]['main']['temp'])
     print(data)
     return data
@@ -278,11 +250,7 @@ def action_motor(motor_status):
         "time": "2019-01-24T13:35:24.246226Z",
         "name": "1"
     }
-
-    # Call REST API
     response = requests.put(url, data=data)
-
-    # Print Response
     print(response.text)
 
 
@@ -298,7 +266,7 @@ def get_lowersensor():
     print(data)
 
     data = int(data['value'])
-    return (data)
+    return data
 
 
 def value_to_print(text):
@@ -310,36 +278,29 @@ def print_content(what_to_print):
     what_to_print = what_to_print + " print_content"
     print(what_to_print)
 
-
-def weather_test(param0):
-    data = requests.get(
-        " https://samples.openweathermap.org/data/2.5/weather?q=" + param0 + "&appid=b6907d289e10d714a6e88b30761fae22 ").json()
+def rajon():
+    path = 'mailbox/credentials.json'
+    result = path.split('/')
+    print(result)
+    return result
+    
+    
+def newspaper_headlines(param0,param1,param2):
+    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
     print(data)
     return data
 
-
-def recipe_puppy(param0, param1, param2, ):
+def recipe_puppy(param0,param1,param2):
     data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
     print(data)
     return data
 
-
-def newspaper_headlines(param0, param1, param2, ):
-    data = requests.get(
-        " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+def weather_test(param0):
+    data = requests.get(" https://samples.openweathermap.org/data/2.5/weather?q=" + param0 + "&appid=b6907d289e10d714a6e88b30761fae22 ").json()
     print(data)
     return data
 
-
-def cricket(param0, param1, param2):
-    data = requests.get(
-        " https://dev132-cricket-live-scores-v1.p.rapidapi.com/matches.php?completedlimit=" + param0 + "&inprogresslimit=" + param1 + "&upcomingLimit=" + param2 + "&appid=dc0613934dmsh24f397f54e7f03bp19870ejsncb99ec04982d ").json()
-    print(data)
-    return data
-
-
-def doctor(param0, param1, param2):
-    data = requests.get(
-        "https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key=f1cfb7c347456d9d8f031b4d9000f958").json()
+def doctor(param0,param1,param2):
+    data = requests.get(" https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
     print(data)
     return data

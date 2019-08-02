@@ -116,9 +116,11 @@ Blockly.Blocks['Read'] = {
         this.appendValueInput("param")
             .setCheck(null)
             .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField("Read");
+            .appendField("Read")
+            .appendField("Mailbox");
         this.appendValueInput("param2")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("Label");
         this.setPreviousStatement(true, null);
         this.setColour(230);
         this.setTooltip("");
@@ -131,15 +133,20 @@ Blockly.Blocks['Send'] = {
         this.appendValueInput("param")
             .setCheck(null)
             .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField("Send");
+            .appendField("Send")
+        .appendField("Mailbox");
         this.appendValueInput("param2")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("From");
         this.appendValueInput("param3")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("To");
         this.appendValueInput("param4")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("Subject");
         this.appendValueInput("param5")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("Message");
         this.setPreviousStatement(true, null);
         this.setColour(230);
         this.setTooltip("");
@@ -152,11 +159,14 @@ Blockly.Blocks['Search'] = {
         this.appendValueInput("param")
             .setCheck(null)
             .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField("Search");
+            .appendField("Search")
+        .appendField("Mailbox");
         this.appendValueInput("param2")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("Label");
         this.appendValueInput("param3")
-            .setCheck(null);
+            .setCheck(null)
+        .appendField("Query");
         this.setPreviousStatement(true, null);
         this.setColour(230);
         this.setTooltip("");
@@ -165,84 +175,69 @@ Blockly.Blocks['Search'] = {
 };
 
 
-Blockly.Blocks['Rajon'] = {
-    init: function () {
+        Blockly.Blocks['rajon'] = {
+        init: function() {
         this.appendValueInput("to_input")
-            .setCheck(null)
-            .appendField('Rajon');
+        .setCheck(null)
+        .appendField('rajon');
         this.setOutput(true, null);
         this.setColour(230);
         this.setTooltip("");
         this.setHelpUrl("");
-    }
-};
-
-
-Blockly.Blocks['weather_test'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('weather_test');
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-Blockly.Blocks['recipe_puppy'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('recipe_puppy');
-        this.appendValueInput("param1")
-            .setCheck(null);
-        this.appendValueInput("param2")
-            .setCheck(null);
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-
-Blockly.Blocks['newspaper_headlines'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('newspaper_headlines');
-        this.appendValueInput("param1")
-            .setCheck(null);
-        this.appendValueInput("param2")
-            .setCheck(null);
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-
-             Blockly.Blocks['cricket'] = {
+      }
+    };
+    
+             Blockly.Blocks['newspaper_headlines'] = {
                 init: function() {
                this.appendValueInput("param0")
                       .setCheck(null)
                       .setAlign(Blockly.ALIGN_CENTRE)
-                    .appendField('cricket completedlimit');
-                   this.appendValueInput("param2")
+                    .appendField('newspaper_headlines q');
+                   this.appendValueInput("param1")
                           .setCheck(null)
-                    .appendField('inprogresslimit');
-                    this.appendValueInput("param3")
+                    .appendField('from');
+                    this.appendValueInput("param2")
                           .setCheck(null)
-                    .appendField('upcomingLimit');
+                    .appendField('sortBy');
                     this.setPreviousStatement(true, null);
                   this.setColour(230);
               this.setTooltip("");
               this.setHelpUrl("");
               }
             };
-
+         
+             Blockly.Blocks['recipe_puppy'] = {
+                init: function() {
+               this.appendValueInput("param0")
+                      .setCheck(null)
+                      .setAlign(Blockly.ALIGN_CENTRE)
+                    .appendField('recipe_puppy i');
+                   this.appendValueInput("param1")
+                          .setCheck(null)
+                    .appendField('q');
+                    this.appendValueInput("param2")
+                          .setCheck(null)
+                    .appendField('p');
+                    this.setPreviousStatement(true, null);
+                  this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
+         
+             Blockly.Blocks['weather_test'] = {
+                init: function() {
+               this.appendValueInput("param0")
+                      .setCheck(null)
+                      .setAlign(Blockly.ALIGN_CENTRE)
+                    .appendField('weather_test q');
+                   this.setPreviousStatement(true, null);
+                  this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
+         
              Blockly.Blocks['doctor'] = {
                 init: function() {
                this.appendValueInput("param0")
