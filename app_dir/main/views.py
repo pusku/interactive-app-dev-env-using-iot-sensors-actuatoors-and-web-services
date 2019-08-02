@@ -11,7 +11,7 @@ from app_dir.main.generated_functions import *
 
 def home(request):
     # Sensor and Actuators Creator
-    all_service = requests.get("http://127.0.0.1:8000/api/service_registry/").json()
+    all_service = requests.get("https://eud.herokuapp.com/api/service_registry/").json()
     if len(all_service) > 0:
         last_service = all_service[-1]
         read_file = open('last_sensor_actuator.txt', 'r')
@@ -32,7 +32,7 @@ def home(request):
             elif last_service['service_type'] == 'actuator':
                 function_writer.actuator_function_writer(name_id, sensor_tag)
                 block_generator.block_generator(name_id, last_service['service_type'])
-                url = 'http://127.0.0.1:8000/api/actuators/'
+                url = 'https://eud.herokuapp.com/api/actuators/'
                 data = {
                     "topic": name_id,
                     "value": "null",
@@ -61,7 +61,7 @@ def home(request):
             block_generator.block_generator(mailbox_name, 'mailbox')
 
     # API Creator
-    api = requests.get("http://127.0.0.1:8000/api/api/").json()
+    api = requests.get("https://eud.herokuapp.com/api/api/").json()
     if len(api) > 0:
         last_api = api[-1]
         print(last_api)
