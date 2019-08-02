@@ -340,6 +340,6 @@ def cricket(param0, param1, param2):
 
 def doctor(param0, param1, param2):
     data = requests.get(
-        " https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='f1cfb7c347456d9d8f031b4d9000f958'").json()
+        "https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key=f1cfb7c347456d9d8f031b4d9000f958").json()
     print(data)
     return data

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff9ba536-f3b2-43ab-bb40-ec422f126d3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/block_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/block_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/generated_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/generated_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/last_api.txt" beforeDir="false" afterPath="$PROJECT_DIR$/last_api.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/api_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/api_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blocks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/js_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/js_declaration.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +36,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
+            <state relative-caret-position="480">
               <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -324,12 +317,12 @@
       <workItem from="1564582040822" duration="625000" />
       <workItem from="1564669063735" duration="18535000" />
       <workItem from="1564725705369" duration="2751000" />
-      <workItem from="1564733033625" duration="8035000" />
+      <workItem from="1564733033625" duration="8250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45205000" />
+    <option name="totallyTimeSpent" value="45420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,13 +337,13 @@
     <frame x="56" y="-8" width="1872" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2665563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2665563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49944812" weight="0.32978722" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" visible="true" weight="0.35531914" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" weight="0.35531914" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
@@ -358,7 +351,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022075" side_tool="true" weight="0.36595744" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49834436" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49834436" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -583,7 +576,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
+        <state relative-caret-position="480">
           <caret line="345" lean-forward="true" selection-start-line="345" selection-end-line="345" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
