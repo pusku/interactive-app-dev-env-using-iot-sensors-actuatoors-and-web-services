@@ -228,7 +228,7 @@ def temperature_checker():
     data = empty_list[-1]
     print(data)
     data = int(data['value'])
-    return (data)
+    return data
 
 
 def weather_info(city=None):
@@ -278,29 +278,40 @@ def print_content(what_to_print):
     what_to_print = what_to_print + " print_content"
     print(what_to_print)
 
+
 def rajon():
     path = 'mailbox/credentials.json'
     result = path.split('/')
     print(result)
     return result
-    
-    
-def newspaper_headlines(param0,param1,param2):
-    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
-    print(data)
-    return data
 
-def recipe_puppy(param0,param1,param2):
+
+def newspaper_headlines(param0, param1, param2, param3=""):
+    data = requests.get(
+        " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    print(data)
+    if param3 != "":
+        return data['articles'][0][param3]
+    else:
+        return data
+
+
+
+def recipe_puppy(param0, param1, param2):
     data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
     print(data)
     return data
 
+
 def weather_test(param0):
-    data = requests.get(" https://samples.openweathermap.org/data/2.5/weather?q=" + param0 + "&appid=b6907d289e10d714a6e88b30761fae22 ").json()
-    print(data)
+    data = requests.get(
+        " https://samples.openweathermap.org/data/2.5/weather?q=" + param0 + "&appid=b6907d289e10d714a6e88b30761fae22 ").json()
+    print(data['main']['temp'])
     return data
 
-def doctor(param0,param1,param2):
-    data = requests.get(" https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
+
+def doctor(param0, param1, param2):
+    data = requests.get(
+        " https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
     print(data)
-    return data
+    return data['list'][0]
