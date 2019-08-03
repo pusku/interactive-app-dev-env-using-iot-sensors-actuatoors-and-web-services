@@ -7,4 +7,3 @@ Blockly.Python['newspaper_headlines'] = function (block) {
     var code = 'newspaper_headlines(' + param0 + ',' + param1 + ',' + param2 + ',' + param3 +')';
     return [code, Blockly.Python.ORDER_NONE];
 };
-        

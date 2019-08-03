@@ -7,6 +7,8 @@ from django.http import HttpResponse, JsonResponse
 import requests
 from app_dir.main import function_writer, block_generator
 from app_dir.main.generated_functions import *
+import ast
+import copy
 
 
 def home(request):
@@ -121,10 +123,6 @@ class ActuatorListApiView(generics.ListAPIView):
             ).distinct().order_by('-time')[:1]
 
         return qs
-
-
-import ast
-import copy
 
 
 def convertExpr2Expression(Expr):

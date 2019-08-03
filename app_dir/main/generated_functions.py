@@ -296,7 +296,6 @@ def newspaper_headlines(param0, param1, param2, param3=""):
         return data
 
 
-
 def recipe_puppy(param0, param1, param2):
     data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
     print(data)
