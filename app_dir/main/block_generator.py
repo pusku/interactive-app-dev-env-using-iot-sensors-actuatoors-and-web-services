@@ -5,7 +5,18 @@ def block_generator(block_name, block_type):
     js_declaration(block_name)
 
 
-def api_block_generator(block_name, block_type, api_fields):
+def api_block_generator(block_name, block_type, api_fields, api_connection):
+    connection = ""
+    if api_connection == "left":
+        connection += """this.setOutput(true, null);"""
+    elif api_connection == 'top':
+        connection += """this.setPreviousStatement(true, null);"""
+    elif api_connection == "bottom":
+        connection += """this.setNextStatement(true, null);"""
+    else:
+        connection += """this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);"""
+
     result = api_fields.split(',')
     res_len = len(result)
     counter1 = 0
@@ -32,7 +43,7 @@ def api_block_generator(block_name, block_type, api_fields):
                    """
                     counter2 += 1
                 else:
-                    append_field += """this.appendValueInput("param""" + str(else_counter+1) + """")
+                    append_field += """this.appendValueInput("param""" + str(else_counter + 1) + """")
                           .setCheck(null)
                     .appendField('""" + i + """');
                     """
@@ -43,19 +54,19 @@ def api_block_generator(block_name, block_type, api_fields):
 
     for p in range(param_should - 1):
         parameter += "var param" + str(
-            p+1) + " = Blockly.Python.valueToCode(block, 'param" + str(
-            p+1) + "', Blockly.Python.ORDER_ATOMIC);\n"
-        parameter_names += "'+param" + str(p+1) + "+',"
+            p + 1) + " = Blockly.Python.valueToCode(block, 'param" + str(
+            p + 1) + "', Blockly.Python.ORDER_ATOMIC);\n"
+        parameter_names += "'+param" + str(p + 1) + "+',"
 
     final_param = parameter_names.rstrip(',')
     f = open("templates/blocks.js", "a+")
     ui_container = """
              Blockly.Blocks['""" + block_name + """'] = {
                 init: function() {
-               """\
-                   + append_field +\
-                   """this.setPreviousStatement(true, null);
-                  this.setColour(230);
+               """ \
+                   + append_field \
+                   + connection \
+                   + """this.setColour(230);
               this.setTooltip("");
               this.setHelpUrl("");
               }
@@ -69,8 +80,63 @@ def api_block_generator(block_name, block_type, api_fields):
     js_container = """
             Blockly.Python['""" + block_name + """'] = function(block) {
                 var param0 = Blockly.Python.valueToCode(block, 'param0', Blockly.Python.ORDER_ATOMIC);""" \
-                + parameter + """
+                   + parameter + """
                 var code = '""" + block_name + """('+param0+',""" + final_param + """)';
+                return [code, Blockly.Python.ORDER_NONE];
+            };
+        """
+    f.write(js_container)
+    f.close()
+
+    js_declaration(block_name)
+
+
+def interactive_block_generator(block_name, block_type, api_fields):
+    result = api_fields
+    append_field = ""
+    for i in range(int(result)):
+        if i == 0:
+            append_field += """this.appendValueInput("param0")
+              .setCheck(null)
+              .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('""" + block_name + """');
+           """
+
+        else:
+            append_field += """this.appendValueInput("param""" + str(i) + """")
+                  .setCheck(null);
+            """
+    parameter = ""
+    parameter_names = ""
+
+    for p in range(int(result)):
+        parameter += "var param" + str(i) \
+                     + " = Blockly.Python.valueToCode(block, 'param" + str(i) + \
+                     "', Blockly.Python.ORDER_ATOMIC);\n"
+        parameter_names += "'+param" + str(i) + "+',"
+
+    final_param = parameter_names.rstrip(',')
+    f = open("templates/blocks.js", "a+")
+    ui_container = """
+             Blockly.Blocks['""" + block_name + """'] = {
+                init: function() {
+               """ \
+                   + append_field \
+                   + """this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
+         """
+    f.write(ui_container)
+    f.close()
+    declaration(block_name, block_type)
+
+    f = open("static/js/generators/codegenerator-" + block_name + ".js", "w+")
+    js_container = """
+            Blockly.Python['""" + block_name + """'] = function(block) {""" \
+                   + parameter + """
+                var code = '""" + block_name + """(""" + final_param + """)';
                 return [code, Blockly.Python.ORDER_NONE];
             };
         """
@@ -100,8 +166,9 @@ def declaration(block_name, block_type):
         f = open("templates/mailbox_declaration.html", "a+")
         f.write('\n' + "<block type=" + '"' + block_name + '"' + "></block>")
         f.close()
-    if block_type == 'api':
-        f = open("templates/api_declaration.html", "a+")
+
+    if block_type == 'interactive':
+        f = open("templates/interactive_block_declaration.html", "a+")
         f.write('\n' + "<block type=" + '"' + block_name + '"' + "></block>")
         f.close()
 
@@ -134,8 +201,7 @@ def get_ui(block_name, block_type):
         block_ui = """
         Blockly.Blocks['""" + block_name + "" + """'] = {
         init: function() {
-        this.appendValueInput("to_input")
-        .setCheck(null)
+        this.appendDummyInput()
         .appendField('""" + block_name + "" + """');
         this.setOutput(true, null);
         this.setColour(230);
@@ -161,8 +227,7 @@ def get_block_js(block_name, block_type):
     if block_type == 'mailbox':
         block_js = """
                 Blockly.Python['""" + block_name + """'] = function(block) {
-                  var value_to_input = Blockly.Python.valueToCode(block, 'to_input', Blockly.Python.ORDER_ATOMIC);
-                  var code = '""" + block_name + """('+value_to_input+')';
+                  var code = '""" + block_name + """()';
                   return [code, Blockly.Python.ORDER_NONE];
                 };
             """
@@ -173,3 +238,29 @@ def js_declaration(block_name):
     f = open("templates/js_declaration.html", "a+")
     f.write("""\n\n<script src="{% static  'js/generators/codegenerator-""" + block_name + """.js' %}"></script>""")
     f.close()
+
+
+def form_creator(action, form_type):
+    if form_type != "conditional":
+        html = """<div class ="container">
+            <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
+                <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
+                { % csrf_token %}
+                { % bootstrap_form form %}
+                { % buttons %}
+                    < button type = "submit" class ="btn btn-primary" > Submit < / button >
+                { % endbuttons %}
+            < / form >
+        < / div >"""
+    else:
+        html = """<div class ="container">
+                   <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
+                       <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
+                       { % csrf_token %}
+                       { % bootstrap_form form %}
+                       { % buttons %}
+                           < button type = "submit" class ="btn btn-primary" > Submit < / button >
+                       { % endbuttons %}
+                   < / form >
+               < / div >"""
+    return html

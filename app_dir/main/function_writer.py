@@ -89,3 +89,20 @@ def """ + function_name + """(""" + final_param + """):
 """
     file.write(code)
     file.close()
+
+
+def interactive_function_writer(function_name, api_fields):
+    result = api_fields
+    fields = ""
+    parameter = ""
+    for i in range(int(result)):
+        parameter += "param" + str(i) + ','
+        fields += "param" + str(i) + " = param" + str(i) + "\n    "
+    final_param = parameter.rstrip(',')
+
+    file = open("app_dir/main/generated_functions.py", "a+")
+    code = """
+def """ + function_name + """(""" + final_param + """):
+    """ + fields
+    file.write(code)
+    file.close()

@@ -1,0 +1,14 @@
+{% block content %}
+<table>
+    <tr>
+        <th>Field 1</th>
+        ...
+        <th>Field N</th>
+    </tr>
+    {% for item in context.bank %}
+    <tr> 
+        <td>{{ item }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

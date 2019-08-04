@@ -39,17 +39,17 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 def Read(param, param2):
     creds = None
-    if os.path.exists('token' + param[1] + '.pickle'):
-        with open('token' + param[1] + '.pickle', 'rb') as token:
+    if os.path.exists('token' + param + '.pickle'):
+        with open('token' + param + '.pickle', 'rb') as token:
             creds = pickle.load(token)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'media/mailbox/' + param[1], SCOPES)
+                'media/mailbox/' + param, SCOPES)
             creds = flow.run_local_server(port=0)
-        with open('token' + param[1] + '.pickle', 'wb') as token:
+        with open('token' + param + '.pickle', 'wb') as token:
             pickle.dump(creds, token)
     service = build('gmail', 'v1', credentials=creds)
     results = service.users().messages().list(userId='me', labelIds=[param2]).execute()
@@ -69,17 +69,17 @@ def Read(param, param2):
 
 def Search(param, param2, param3):
     creds = None
-    if os.path.exists('token' + param[1] + '.pickle'):
-        with open('token' + param[1] + '.pickle', 'rb') as token:
+    if os.path.exists('token' + param + '.pickle'):
+        with open('token' + param + '.pickle', 'rb') as token:
             creds = pickle.load(token)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'media/mailbox/' + param[1], SCOPES)
+                'media/mailbox/' + param, SCOPES)
             creds = flow.run_local_server(port=0)
-        with open('token' + param[1] + '.pickle', 'wb') as token:
+        with open('token' + param + '.pickle', 'wb') as token:
             pickle.dump(creds, token)
     service = build('gmail', 'v1', credentials=creds)
     results = service.users().messages().list(userId='me', labelIds=[param2], q=param3).execute()
@@ -98,17 +98,17 @@ def Search(param, param2, param3):
 
 def Label(param):
     creds = None
-    if os.path.exists('token' + param[1] + '.pickle'):
-        with open('token' + param[1] + '.pickle', 'rb') as token:
+    if os.path.exists('token' + param + '.pickle'):
+        with open('token' + param + '.pickle', 'rb') as token:
             creds = pickle.load(token)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'media/mailbox/' + param[1], SCOPES)
+                'media/mailbox/' + param, SCOPES)
             creds = flow.run_local_server(port=0)
-        with open('token' + param[1] + '.pickle', 'wb') as token:
+        with open('token' + param + '.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
     service = build('gmail', 'v1', credentials=creds)
@@ -206,7 +206,7 @@ class SendEMail:
 
 def Send(param, param2, param3, param4, param5):
     SCOPES = 'https://mail.google.com/'
-    CLIENT_SECRET_FILE = 'media/mailbox/' + param[1]
+    CLIENT_SECRET_FILE = 'media/mailbox/' + param
     APPLICATION_NAME = 'Gmail API Python Quickstart'
     authInst = auth(SCOPES, CLIENT_SECRET_FILE, APPLICATION_NAME)
     credentials = authInst.get_credentials()
@@ -275,21 +275,21 @@ def value_to_print(text):
 
 
 def print_content(what_to_print):
-    what_to_print = what_to_print + " print_content"
-    print(what_to_print)
+    result = what_to_print
+    print(result)
+    return result
 
 
 def rajon():
     path = 'mailbox/credentials.json'
     result = path.split('/')
-    print(result)
-    return result
+    print(result[1])
+    return result[1]
 
 
 def newspaper_headlines(param0, param1, param2, param3=""):
     data = requests.get(
         " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
-    print(data)
     if param3 != "":
         return data['articles'][0][param3]
     else:
@@ -314,3 +314,83 @@ def doctor(param0, param1, param2):
         " https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
     print(data)
     return data['list'][0]
+
+
+import ast
+import copy
+
+
+def convertExpr2Expression(Expr):
+    Expr.lineno = 0
+    Expr.col_offset = 0
+    result = ast.Expression(Expr.value, lineno=0, col_offset=0)
+
+    return result
+
+
+def exec_with_return(code):
+    code_ast = ast.parse(code)
+
+    init_ast = copy.deepcopy(code_ast)
+    init_ast.body = code_ast.body[:-1]
+
+    last_ast = copy.deepcopy(code_ast)
+    last_ast.body = code_ast.body[-1:]
+
+    exec(compile(init_ast, "<ast>", "exec"), globals())
+    if type(last_ast.body[0]) == ast.Expr:
+        return eval(compile(convertExpr2Expression(last_ast.body[0]), "<ast>", "eval"), globals())
+    else:
+        exec(compile(last_ast, "<ast>", "exec"), globals())
+
+
+def custom_if(param0, param1):
+    if param0 is True:
+        result = param1
+        return result
+
+
+def custom_if_else(param0, param1, param2):
+    if param0 is True:
+        result = param1
+        return result
+    else:
+        return param2
+
+
+def api_creator(param0, param1, param2, param3):
+    url = 'http://127.0.0.1:8000/api/api/'
+
+    data = {
+        "name": param0,
+        "api": param1,
+        "fields": param2,
+        "connection": param3
+    }
+    requests.post(url, data=data)
+    return "API Created Successfully!"
+    # print(response.text)
+
+
+def test333(param0):
+    data = requests.get(
+        " https://samples.openweathermap.org/data/2.5/weather?q=" + param0 + "&appid=b6907d289e10d714a6e88b30761fae22 ").json()
+    print(data)
+    return data
+
+
+def interactive_creator(param0, param1):
+    url = 'http://127.0.0.1:8000/api/interactive/'
+
+    data = {
+        "name": param0,
+        "fields": param1,
+    }
+    requests.post(url, data=data)
+    return "Interactive Block Created Successfully!"
+
+def first_interactive(param0,param1,param2):
+    param0 = param0
+    param1 = param1
+    param2 = param2
+    

@@ -65,9 +65,21 @@ class API(models.Model):
     name = models.CharField(max_length=100, null=True)
     api = models.CharField(max_length=100, null=True)
     fields = models.TextField(max_length=500, null=True)
+    connection = models.TextField(max_length=500, null=True)
 
     class Meta:
         verbose_name_plural = 'API'
+
+    def __str__(self):
+        return self.name
+
+
+class Interactive(models.Model):
+    name = models.CharField(max_length=100, null=True)
+    fields = models.TextField(max_length=500, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Interactive'
 
     def __str__(self):
         return self.name
