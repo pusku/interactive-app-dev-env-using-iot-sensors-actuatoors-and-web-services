@@ -5,36 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff9ba536-f3b2-43ab-bb40-ec422f126d3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app_dir/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_dir/main/app_creator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_dir/main/conditional_forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_dir/main/form_creator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_dir/main/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_dir/main/post_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/block_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/block_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/function_writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/function_writer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/generated_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/generated_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/last_api.txt" beforeDir="false" afterPath="$PROJECT_DIR$/last_api.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-doctor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-newspaper_headlines.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-recipe_puppy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-test 1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-test333.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-weather_test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/api_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/api_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blocks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_dir/main/form_creator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/form_creator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_dir/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/interactive_block_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/interactive_block_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/js_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/js_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mailbox_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mailbox_declaration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokencredentials.json.pickle" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,15 +36,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/meta_block_declaration.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/last_api.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -88,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="280">
+              <caret line="132" column="18" lean-forward="true" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -127,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_dir/main/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+            <state relative-caret-position="416">
+              <caret line="302" column="1318" selection-start-line="302" selection-start-column="1318" selection-end-line="302" selection-end-column="1318" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -136,11 +101,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mailbox_declaration.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_dir/main/form_creator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="204">
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_dir/main/post_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="678">
+              <caret line="233" lean-forward="true" selection-start-line="233" selection-end-line="233" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -231,7 +208,6 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/app_dir/main/app_creator.py" />
         <option value="$PROJECT_DIR$/app_dir/main/conditional_forms.py" />
-        <option value="$PROJECT_DIR$/app_dir/main/form_creator.py" />
         <option value="$PROJECT_DIR$/app_dir/main/generated_functions.py" />
         <option value="$PROJECT_DIR$/app_dir/main/post_functions.py" />
         <option value="$PROJECT_DIR$/app_dir/main/urls.py" />
@@ -240,13 +216,14 @@
         <option value="$PROJECT_DIR$/templates/js_declaration.html" />
         <option value="$PROJECT_DIR$/last_api.txt" />
         <option value="$PROJECT_DIR$/templates/app.html" />
-        <option value="$PROJECT_DIR$/app_dir/main/forms.py" />
         <option value="$PROJECT_DIR$/templates/forms.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/app_dir/main/forms.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/form_creator.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="985" />
     <option name="width" value="942" />
     <option name="height" value="1087" />
@@ -371,12 +348,12 @@
       <workItem from="1564842748059" duration="1838000" />
       <workItem from="1564925675742" duration="22429000" />
       <workItem from="1565014537694" duration="42071000" />
-      <workItem from="1565105348831" duration="4701000" />
+      <workItem from="1565105348831" duration="5022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128785000" />
+    <option name="totallyTimeSpent" value="129106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,7 +374,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49944812" weight="0.32978722" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" visible="true" weight="0.2968085" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" weight="0.2968085" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
@@ -405,7 +382,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022075" side_tool="true" weight="0.36595744" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49834436" weight="0.21702127" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49834436" visible="true" weight="0.21702127" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -645,27 +622,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/form_creator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-407">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
           <caret line="341" selection-start-line="341" selection-end-line="341" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/post_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="242" selection-start-line="242" selection-end-line="242" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -738,16 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/app.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1050">
@@ -776,8 +726,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="280">
+          <caret line="132" column="18" lean-forward="true" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="302" column="1318" selection-start-line="302" selection-start-column="1318" selection-end-line="302" selection-end-column="1318" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/post_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="233" lean-forward="true" selection-start-line="233" selection-end-line="233" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/form_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>

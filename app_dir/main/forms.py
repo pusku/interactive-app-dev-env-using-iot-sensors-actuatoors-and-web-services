@@ -35,6 +35,7 @@ def Label(param0):
                     }
                 });
             }
+            var myVar;
             function continuous""" + function_name + """() {
                 var param0 = $("#param0""" + function_name + """").val();
                 $.ajax({
@@ -90,6 +91,7 @@ def Read(param0, param1):
                }
            });
        }
+       var myVar;
        function continuous""" + function_name + """() {
            var param0 = $("#param0""" + function_name + """").val();
            var param1 = $("#param1""" + function_name + """").val();
@@ -145,7 +147,7 @@ def Search(param0, param1, param2):
                   }
               });
           }
-          
+          var myVar;
           function continuous""" + function_name + """() {
               var param0 = $("#param0""" + function_name + """").val();
               var param1 = $("#param1""" + function_name + """").val();
@@ -208,8 +210,8 @@ def Send(param0, param1, param2, param3, param4):
                   }
               });
         }
-        
-         function continuous""" + function_name + """() {
+        var myVar;
+        function continuous""" + function_name + """() {
               var param0 = $("#param0""" + function_name + """").val();
               var param1 = $("#param1""" + function_name + """").val();
               var param2 = $("#param2""" + function_name + """").val();
@@ -264,6 +266,7 @@ def weather_info(city):
               }
           });
         }
+        var myVar;
         function continuous""" + function_name + """() {
               var param0 = $("#param0""" + function_name + """").val();
               $.ajax({
@@ -297,5 +300,5 @@ def rajon():
 
 
 def newspaper_headlines_reader(param0, param1, param2):
-    code = "<h1>newspaper_headlines_reader</h1><button class='btn btn-primary' onclick='newspaper_headlines_reader()'>Run</button><button class='btn btn-info' onclick='continuousnewspaper_headlines_reader()'>Run Continuously</button><button class='btn btn-danger' onclick='stopnewspaper_headlines_reader()'>Stop Continuous Run</button><form enctype='multipart/form-data' action='' method='post'>{% csrf_token %}<input class='form-control' type='text' name='param0' id='param0newspaper_headlines_reader' value=''/><input class='form-control' type='text' name='param1' id='param1newspaper_headlines_reader' value=''/><input class='form-control' type='text' name='param2' id='param2newspaper_headlines_reader' value=''/></form><script>function newspaper_headlines_reader(){var param0 = $('#param0newspaper_headlines_reader').val();var param1 = $('#param1newspaper_headlines_reader').val();var param2 = $('#param2newspaper_headlines_reader').val(); $.ajax({type: 'POST',url: '/newspaper_headlines_reader/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0,'param1': param1,'param2': param2},success: function (response) {console.log(response.code);document.getElementById('newspaper_headlines_reader_result').innerHTML = JSON.stringify(response.code, undefined,2);}});}function continuousnewspaper_headlines_reader(){var param0 = $('#param0newspaper_headlines_reader').val();var param1 = $('#param1newspaper_headlines_reader').val();var param2 = $('#param2newspaper_headlines_reader').val(); $.ajax({type: 'POST',url: '/newspaper_headlines_reader/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0,'param1': param1,'param2': param2},success: function (response) {console.log(response.code);document.getElementById('newspaper_headlines_reader_result').innerHTML = JSON.stringify(response.code, undefined,2);}});myVarnewspaper_headlines_reader = setTimeout('continuousnewspaper_headlines_reader()', 100);}function stopnewspaper_headlines_reader() {clearTimeout(myVarnewspaper_headlines_reader);}</script><pre style='width: 100%; height:100px' id='newspaper_headlines_reader_result'></pre><script>function newspaper_headlines_reader() {var param0 = $('#param0newspaper_headlines_reader').val();$.ajax({type: 'POST',url: '/newspaper_headlines_reader/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0},success: function (response) {console.log(response.code);document.getElementById('newspaper_headlines_reader_result').innerHTML = JSON.stringify(response.code, undefined, 2);});}</script>"
+    code = "<h1>newspaper_headlines_reader</h1><button class='btn btn-primary' onclick='newspaper_headlines_reader()'>Run</button><button class='btn btn-info' onclick='continuousnewspaper_headlines_reader()'>Run Continuously</button><button class='btn btn-danger' onclick='stopnewspaper_headlines_reader()'>Stop Continuous Run</button><form enctype='multipart/form-data' action='' method='post'>{% csrf_token %}<input class='form-control' type='text' name='param0' id='param0newspaper_headlines_reader' value=''/><input class='form-control' type='text' name='param1' id='param1newspaper_headlines_reader' value=''/><input class='form-control' type='text' name='param2' id='param2newspaper_headlines_reader' value=''/></form><script>function newspaper_headlines_reader(){var param0 = $('#param0newspaper_headlines_reader').val();var param1 = $('#param1newspaper_headlines_reader').val();var param2 = $('#param2newspaper_headlines_reader').val(); $.ajax({type: 'POST',url: '/newspaper_headlines_reader/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0,'param1': param1,'param2': param2},success: function (response) {console.log(response.code);document.getElementById('newspaper_headlines_reader_result').innerHTML = JSON.stringify(response.code, undefined,2);}});}var myVar;function continuousnewspaper_headlines_reader(){var param0 = $('#param0newspaper_headlines_reader').val();var param1 = $('#param1newspaper_headlines_reader').val();var param2 = $('#param2newspaper_headlines_reader').val(); $.ajax({type: 'POST',url: '/newspaper_headlines_reader/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0,'param1': param1,'param2': param2},success: function (response) {console.log(response.code);document.getElementById('newspaper_headlines_reader_result').innerHTML = JSON.stringify(response.code, undefined,2);}});myVarnewspaper_headlines_reader = setTimeout('continuousnewspaper_headlines_reader()', 100);}function stopnewspaper_headlines_reader() {clearTimeout(myVarnewspaper_headlines_reader);}</script><pre style='width: 100%; height:100px' id='newspaper_headlines_reader_result'></pre><script>function newspaper_headlines_reader() {var param0 = $('#param0newspaper_headlines_reader').val();$.ajax({type: 'POST',url: '/newspaper_headlines_reader/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0},success: function (response) {console.log(response.code);document.getElementById('newspaper_headlines_reader_result').innerHTML = JSON.stringify(response.code, undefined, 2);});}</script>"
     return code
