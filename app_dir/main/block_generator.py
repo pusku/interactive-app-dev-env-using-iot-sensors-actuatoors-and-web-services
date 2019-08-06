@@ -110,10 +110,10 @@ def interactive_block_generator(block_name, block_type, api_fields):
     parameter_names = ""
 
     for p in range(int(result)):
-        parameter += "var param" + str(i) \
-                     + " = Blockly.Python.valueToCode(block, 'param" + str(i) + \
+        parameter += "var param" + str(p) \
+                     + " = Blockly.Python.valueToCode(block, 'param" + str(p) + \
                      "', Blockly.Python.ORDER_ATOMIC);\n"
-        parameter_names += "'+param" + str(i) + "+',"
+        parameter_names += "'+param" + str(p) + "+',"
 
     final_param = parameter_names.rstrip(',')
     f = open("templates/blocks.js", "a+")

@@ -257,19 +257,34 @@ Blockly.Blocks['first_interactive'] = {
         this.setHelpUrl("");
     }
 };
-             Blockly.Blocks['newspaper_headlines_reader'] = {
+Blockly.Blocks['newspaper_headlines_reader'] = {
+    init: function () {
+        this.appendValueInput("param0")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('newspaper_headlines_reader q');
+        this.appendValueInput("param1")
+            .setCheck(null)
+            .appendField('from');
+        this.appendValueInput("param2")
+            .setCheck(null)
+            .appendField('sortBy');
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+             Blockly.Blocks['second_interactive_block'] = {
                 init: function() {
                this.appendValueInput("param0")
-                      .setCheck(null)
-                      .setAlign(Blockly.ALIGN_CENTRE)
-                    .appendField('newspaper_headlines_reader q');
-                   this.appendValueInput("param1")
-                          .setCheck(null)
-                    .appendField('from');
-                    this.appendValueInput("param2")
-                          .setCheck(null)
-                    .appendField('sortBy');
-                    this.setOutput(true, null);this.setColour(230);
+              .setCheck(null)
+              .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('second_interactive_block');
+           this.appendValueInput("param1")
+                  .setCheck(null);
+            this.setColour(230);
               this.setTooltip("");
               this.setHelpUrl("");
               }

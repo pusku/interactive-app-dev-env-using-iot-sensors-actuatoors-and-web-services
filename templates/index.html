@@ -24,7 +24,7 @@
     <div id="another" class="col-md-6 pull-right" >
         {% include "forms.html" %}
     </div>
-    <div id="blocklyDiv" class="col-md-6" style="height: 480px; width: 50%;"></div>
+    <div id="blocklyDiv" class="col-md-6 pull-left" style="height: 480px; width: 50%;"></div>
     <xml id="toolbox" style="display: none">
         <category name="Logic" colour="%{BKY_LOGIC_HUE}">
             <block type="controls_if"></block>
@@ -173,7 +173,7 @@
         }
         {% include "blocks.js" %}
     </script>
-    <div class="col-md-6">
+    <div class="col-md-6 pull-left">
         <h1> Result</h1>
         <pre id="json"></pre>
     </div>

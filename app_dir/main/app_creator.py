@@ -13,7 +13,6 @@ def first_interactive(param0, param1, param2):
     param0 = param0
     os.remove("templates/app.html")
     f = open("templates/app.html", "a+")
-    print(param0)
     f.write(param0)
     f.close()
     param1 = param1
@@ -58,3 +57,19 @@ def create_app(request):
         return HttpResponse('Use ajax format!')
 
     return JsonResponse({'code': result})
+
+
+def second_interactive_block(param0, param1):
+    param0 = param0
+    print(param0)
+    print(param0)
+    os.remove("templates/app.html")
+    f = open("templates/app.html", "a+")
+    f.write(param0)
+    f.close()
+
+    param1 = param1
+    f = open("templates/app.html", "a+")
+    f.write(param1)
+    f.close()
+    f.close()

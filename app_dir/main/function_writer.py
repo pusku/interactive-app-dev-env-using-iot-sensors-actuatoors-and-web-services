@@ -97,7 +97,20 @@ def interactive_function_writer(function_name, api_fields):
     parameter = ""
     for i in range(int(result)):
         parameter += "param" + str(i) + ','
-        fields += "param" + str(i) + " = param" + str(i) + "\n    "
+        if i == 0:
+            fields += """param""" + str(i) + """ = param""" + str(i) + """
+     os.remove("templates/app.html")
+     f = open("templates/app.html", "a+")
+     f.write(param""" + str(i) + """)
+     f.close()\n
+     """
+        else:
+            fields += """param""" + str(i) + """ = param""" + str(i) + """
+            f = open("templates/app.html", "a+")
+            f.write(param""" + str(i) + """)
+            f.close()
+            f.close()
+            """
     final_param = parameter.rstrip(',')
 
     file = open("app_dir/main/app_creator.py", "a+")

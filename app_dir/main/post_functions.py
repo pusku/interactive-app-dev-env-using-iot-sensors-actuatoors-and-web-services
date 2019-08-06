@@ -241,7 +241,9 @@ def weather_info(request):
     data = (data['list'][0]['main']['temp'])
     return JsonResponse({'code': data})
 
+
 def newspaper_headlines_reader(request):
-    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + request.POST["param0"] + "&from=" + request.POST["param1"] + "&sortBy=" + request.POST["param2"] + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + request.POST["param0"] + "&from=" + request.POST[
+        "param1"] + "&sortBy=" + request.POST["param2"] + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
     print(data)
     return JsonResponse({'code': data})
