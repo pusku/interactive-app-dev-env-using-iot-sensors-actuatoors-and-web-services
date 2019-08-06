@@ -99,18 +99,6 @@ Blockly.Blocks['Label'] = {
     }
 };
 
-Blockly.Blocks['place_finder'] = {
-    init: function () {
-        this.appendValueInput("param")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField("place_finder");
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
 
 Blockly.Blocks['Read'] = {
     init: function () {
@@ -187,78 +175,6 @@ Blockly.Blocks['rajon'] = {
     }
 };
 
-Blockly.Blocks['newspaper_headlines'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('newspaper_headlines q');
-        this.appendValueInput("param1")
-            .setCheck(null)
-            .appendField('from');
-        this.appendValueInput("param2")
-            .setCheck(null)
-            .appendField('sortBy');
-        this.appendValueInput("param3")
-            .setCheck(null)
-            .appendField('custom query');
-        this.setOutput(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-
-Blockly.Blocks['recipe_puppy'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('recipe_puppy i');
-        this.appendValueInput("param1")
-            .setCheck(null)
-            .appendField('q');
-        this.appendValueInput("param2")
-            .setCheck(null)
-            .appendField('p');
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-
-Blockly.Blocks['weather_test'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('weather_test q');
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-
-Blockly.Blocks['doctor'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('doctor location');
-        this.appendValueInput("param1")
-            .setCheck(null)
-            .appendField('skip');
-        this.appendValueInput("param2")
-            .setCheck(null)
-            .appendField('limit');
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
 
 Blockly.Blocks['custom_if'] = {
     init: function () {
@@ -270,6 +186,7 @@ Blockly.Blocks['custom_if'] = {
             .appendField("DO");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+        this.setOutput(true, null);
         this.setColour(230);
         this.setTooltip("");
         this.setHelpUrl("");
@@ -312,34 +229,6 @@ Blockly.Blocks['api_creator'] = {
         this.setHelpUrl("");
     }
 };
-Blockly.Blocks['test 1'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('test 1 q');
-        this.appendValueInput("param1")
-            .setCheck(null)
-            .appendField('w');
-        this.setPreviousStatement(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-
-Blockly.Blocks['test333'] = {
-    init: function () {
-        this.appendValueInput("param0")
-            .setCheck(null)
-            .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('test333 q');
-        this.setOutput(true, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
 
 Blockly.Blocks['interactive_creator'] = {
     init: function () {
@@ -347,23 +236,40 @@ Blockly.Blocks['interactive_creator'] = {
             .setCheck(null)
             .appendField("Interactive Creator");
         this.appendValueInput("fields")
-        .setCheck(null);
+            .setCheck(null);
         this.setColour(230);
         this.setTooltip("");
         this.setHelpUrl("");
     }
 };
-             Blockly.Blocks['first_interactive'] = {
+Blockly.Blocks['first_interactive'] = {
+    init: function () {
+        this.appendValueInput("param0")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('first_interactive');
+        this.appendValueInput("param1")
+            .setCheck(null);
+        this.appendValueInput("param2")
+            .setCheck(null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+             Blockly.Blocks['newspaper_headlines_reader'] = {
                 init: function() {
                this.appendValueInput("param0")
-              .setCheck(null)
-              .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('first_interactive');
-           this.appendValueInput("param1")
-                  .setCheck(null);
-            this.appendValueInput("param2")
-                  .setCheck(null);
-            this.setColour(230);
+                      .setCheck(null)
+                      .setAlign(Blockly.ALIGN_CENTRE)
+                    .appendField('newspaper_headlines_reader q');
+                   this.appendValueInput("param1")
+                          .setCheck(null)
+                    .appendField('from');
+                    this.appendValueInput("param2")
+                          .setCheck(null)
+                    .appendField('sortBy');
+                    this.setOutput(true, null);this.setColour(230);
               this.setTooltip("");
               this.setHelpUrl("");
               }

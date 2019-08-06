@@ -1,14 +1,7 @@
+{% load static %}
 {% block content %}
-
-<div class="container">
-  <h1>Patient Checkin</h1>
-  <h2>{{patient.first_name}} {{patient.last_name}}</h2>
-</div>
-<div class="container">
- <form enctype="multipart/form-data" action="/save_form/" method="post">{% csrf_token %}
-        <input type="text" name="myfile" id="myfile"/>
-        <input type="submit" value="Upload image">
- </form>
-</div>
-
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <div class="container2">
+        {% include "app.html" %}
+    </div>
 {% endblock %}

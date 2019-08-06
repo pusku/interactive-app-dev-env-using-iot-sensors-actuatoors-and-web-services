@@ -6,7 +6,7 @@ from .models import *
 from django.db.models import Q
 from django.http import HttpResponse, JsonResponse
 import requests
-from app_dir.main import function_writer, block_generator
+from app_dir.main import function_writer, block_generator, form_creator
 from app_dir.main.generated_functions import *
 import ast
 import copy
@@ -27,25 +27,6 @@ def save_form(request):
         print(context['bank'][0])
         return render(request, 'result.html', context)
 
-
-# class MyForm(forms.ModelForm):  # Note that it is not inheriting from forms.ModelForm
-#     a = forms.CharField(max_length=20)
-#     # All my attributes here
-#
-#
-# def form_handle(request):
-#     form = MyForm()
-#     if request.method == 'POST':
-#         form = MyForm(request.POST)
-#         if form.is_valid():
-#             cd = form.cleaned_data
-#             # now in the object cd, you have the form as a dictionary.
-#             a = cd.get('a')
-#
-#     # blah blah encode parameters for a url blah blah
-#     # and make another post request
-#     # edit : added ": "  after    if request.method=='POST'
-#
 
 def home(request):
     # Sensor and Actuators Creator
@@ -115,6 +96,9 @@ def home(request):
             write_file.close()
             function_writer.api_function_writer(api_name, api_link, api_fields)
             block_generator.api_block_generator(api_name, 'api', api_fields, api_connection)
+            form_creator.api_form_creator(api_name, api_fields)
+            form_creator.url_creator(api_name)
+            form_creator.post_function_creator(api_name, api_link, api_fields)
 
     # Interactive Creator
     interactive = requests.get("http://127.0.0.1:8000/api/interactive/").json()

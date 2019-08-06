@@ -4,20 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     {% include "js_declaration.html" %}
     {% include "style.css" %}
 </head>
 <body>
-
-<p>
-    <button onclick="showCode()">Show Python</button>
-    <button onclick="runCode()" id="runcode">Run Python</button>
-    <button onclick="save()" id="save">Save Combination</button>
-    <button onclick="restore()" id="restore">Restore</button>
+<br>
+<p class="col-md-6">
+    <button class="btn btn-primary" onclick="showCode()">Show Python</button>
+    <button class="btn btn-success" onclick="runCode()" id="runcode">Run Python</button>
+    <button class="btn btn-warning" onclick="save()" id="save">Create App</button>
+    <button class="btn btn-info" onclick="continuous()" id="continuous">Run Continuously</button>
+    <button class="btn btn-danger" onclick="stop()" id="stop">Stop Continuous Run</button>
     {% csrf_token %}
 </p>
+<div id="another" class="col-md-6 pull-right" >
+    {% include "forms.html" %}
+</div>
+<div id="blocklyDiv" class="col-md-6" style="height: 480px; width: 50%;"></div>
 
-<div id="blocklyDiv" style="height: 480px; width: 1000px;"></div>
 <xml id="toolbox" style="display: none">
 
     <category name="Logic" colour="%{BKY_LOGIC_HUE}">
@@ -98,16 +106,24 @@
     }
 
     function save() {
-        if (typeof (Storage) !== "undefined") {
-            var xml = Blockly.Xml.workspaceToDom(Blockly.demoWorkspace);
-            localStorage.setItem(document.getElementById("blocklyDiv").value, Blockly.Xml.domToText(xml));
-            console.log("backuped");
-            Blockly.demoWorkspace.clear();
-        } else {
-            alart("error in save");
-        }
-    }
+        Blockly.Python.INFINITE_LOOP_TRAP = null;
+        var code = Blockly.Python.workspaceToCode(demoWorkspace);
+        $.ajax({
+            type: 'POST',
+            url: "/app_creator/",
+            headers: {
+                "X-CSRFToken": $("input[name=csrfmiddlewaretoken]").val()
+            },
+            data: {'code': code},
+            success: function (response) {
+                console.log(response.code);
+                document.getElementById("json").innerHTML = JSON.stringify(response.code, undefined, 2);
+                {#$("#message").text(JSON.stringify(response.code));#}
+            }
+        });
 
+    }
+    $('#container2').load(document.URL +  ' #container2');
     function restore() {
         Blockly.demoWorkspace.clear()
         var nameOfTheProject = document.getElementById("blocklyDiv").value;
@@ -120,7 +136,30 @@
             }
         }
     }
+    var myVar;
 
+    function continuous() {
+         Blockly.Python.INFINITE_LOOP_TRAP = null;
+        var code = Blockly.Python.workspaceToCode(demoWorkspace);
+        $.ajax({
+            type: 'POST',
+            url: "/get_motor_status/",
+            headers: {
+                "X-CSRFToken": $("input[name=csrfmiddlewaretoken]").val()
+            },
+            data: {'code': code},
+            success: function (response) {
+                console.log(response.code);
+                document.getElementById("json").innerHTML = JSON.stringify(response.code, undefined, 2);
+                {#$("#message").text(JSON.stringify(response.code));#}
+            }
+        });
+
+        myVar = setTimeout("continuous()", 100);
+    }
+        function stop() {
+            clearTimeout(myVar);
+        }
     function runCode() {
         Blockly.Python.INFINITE_LOOP_TRAP = null;
         var code = Blockly.Python.workspaceToCode(demoWorkspace);
@@ -141,6 +180,29 @@
 
     {% include "blocks.js" %}
 </script>
+
+{#<script type="text/javascript">#}
+{##}
+{#    jQuery(document).ready(function($){#}
+{#        working = false;#}
+{#        var do_sync = function(){#}
+{#            if ( working ) { return; }#}
+{#            working = true;#}
+{#            jQuery.get(#}
+{#                "http://192.168.0.108:8080/api/getServerData",#}
+{#                {},#}
+{#                function(ret){#}
+{#                    working = false;#}
+{#                }#}
+{#            );#}
+{#        }#}
+{#        window.setInterval(do_sync, 3000);#}
+{#    });#}
+{##}
+{#</script>#}
+<div class="col-md-6">
+    <h1> Result</h1>
 <pre id="json"></pre>
+</div>
 </body>
 </html>

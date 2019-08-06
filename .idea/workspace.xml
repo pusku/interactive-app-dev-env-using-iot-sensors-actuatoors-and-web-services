@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app_dir/main/forms.py" line="28" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ff9ba536-f3b2-43ab-bb40-ec422f126d3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/last_interactive.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-api_creator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-custom_if.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-custom_if_else.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-interactive_creator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/interactive_block_declaration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/meta_block_declaration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_dir/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_dir/main/app_creator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_dir/main/conditional_forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_dir/main/form_creator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_dir/main/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app_dir/main/post_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/block_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/block_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/function_writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/function_writer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/generated_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/generated_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_dir/main/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_dir/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_dir/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/last_api.txt" beforeDir="false" afterPath="$PROJECT_DIR$/last_api.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-rajon.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-rajon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-doctor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-newspaper_headlines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-recipe_puppy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-test 1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-test333.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/generators/codegenerator-weather_test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/api_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/api_declaration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blocks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/interactive_block_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/interactive_block_declaration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/js_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/js_declaration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mailbox_declaration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mailbox_declaration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokencredentials.json.pickle" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,57 +48,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
+        <entry file="file://$PROJECT_DIR$/templates/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="-1050">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="n#style#0;n#pre#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#pre#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#pre#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/envs/eud/Lib/site-packages/google_auth_oauthlib/flow.py">
+        <entry file="file://$PROJECT_DIR$/templates/meta_block_declaration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="179" selection-start-line="179" selection-end-line="179" />
+            <state relative-caret-position="17">
+              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/forms.html">
+        <entry file="file://$PROJECT_DIR$/last_api.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="14" />
+            <state>
+              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_dir/main/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -101,61 +88,75 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/python3.5/site-packages/django/contrib/auth/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="164" column="35" lean-forward="true" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_dir/main/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+            <state relative-caret-position="238">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configurations/settings.py">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="153">
+              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/forms.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sensor_declaration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_dir/main/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mailbox_declaration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fiels</find>
-      <find>response</find>
-      <find>json</find>
-      <find>5000</find>
-      <find>api_function_writer</find>
-      <find>api_fields</find>
-      <find>fields</find>
       <find>Label</find>
-      <find>param2</find>
       <find>do</find>
       <find>mailbox</find>
       <find>connection</find>
@@ -164,6 +165,27 @@
       <find>form</find>
       <find>print</find>
       <find>param</find>
+      <find>if</find>
+      <find>api</find>
+      <find>rajo</find>
+      <find>ajax</find>
+      <find>request</find>
+      <find>param2</find>
+      <find>first_interactive</find>
+      <find>blocklyDiv</find>
+      <find>data</find>
+      <find>continuousnewspaper_headlines_reader</find>
+      <find>stopnewspaper_headlines_reader</find>
+      <find>newspaper_headlines_reader</find>
+      <find>runCode</find>
+      <find>run</find>
+      <find>div</find>
+      <find>newspaper_headlines_reader_result</find>
+      <find>style</find>
+      <find>200px</find>
+      <find>button</find>
+      <find>100</find>
+      <find>50%</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,40 +206,47 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/configurations/wsgi.py" />
-        <option value="$PROJECT_DIR$/templates/mailbox_declaration.html" />
         <option value="$PROJECT_DIR$/last_mailbox.txt" />
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-newspaper_headlines.js" />
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-custom_if.js" />
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-custom_if_else.js" />
-        <option value="$PROJECT_DIR$/templates/api_declaration.html" />
         <option value="$PROJECT_DIR$/templates/email_declaration.html" />
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-rajon.js" />
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-api_creator.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/meta_block_declaration.html" />
-        <option value="$PROJECT_DIR$/templates/interactive_block_declaration.html" />
         <option value="$PROJECT_DIR$/app_dir/main/serializers.py" />
         <option value="$PROJECT_DIR$/app_dir/main/models.py" />
         <option value="$PROJECT_DIR$/static/js/generators/codegenerator-interactive_creator.js" />
         <option value="$PROJECT_DIR$/app_dir/main/admin.py" />
-        <option value="$PROJECT_DIR$/last_api.txt" />
+        <option value="$PROJECT_DIR$/last_interactive.txt" />
+        <option value="$PROJECT_DIR$/configurations/settings.py" />
+        <option value="$PROJECT_DIR$/lib/python3.5/site-packages/django/contrib/auth/forms.py" />
+        <option value="$PROJECT_DIR$/templates/result.html" />
+        <option value="$PROJECT_DIR$/app_dir/main/views.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/block_generator.py" />
+        <option value="$PROJECT_DIR$/templates/interactive_block_declaration.html" />
+        <option value="$PROJECT_DIR$/templates/mailbox_declaration.html" />
+        <option value="$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js" />
         <option value="$PROJECT_DIR$/app_dir/main/function_writer.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/app_dir/main/app_creator.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/conditional_forms.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/form_creator.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/generated_functions.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/post_functions.py" />
+        <option value="$PROJECT_DIR$/app_dir/main/urls.py" />
+        <option value="$PROJECT_DIR$/templates/api_declaration.html" />
         <option value="$PROJECT_DIR$/templates/blocks.js" />
         <option value="$PROJECT_DIR$/templates/js_declaration.html" />
-        <option value="$PROJECT_DIR$/last_interactive.txt" />
-        <option value="$PROJECT_DIR$/app_dir/main/block_generator.py" />
-        <option value="$PROJECT_DIR$/configurations/settings.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/lib/python3.5/site-packages/django/contrib/auth/forms.py" />
-        <option value="$PROJECT_DIR$/app_dir/main/urls.py" />
+        <option value="$PROJECT_DIR$/last_api.txt" />
+        <option value="$PROJECT_DIR$/templates/app.html" />
+        <option value="$PROJECT_DIR$/app_dir/main/forms.py" />
         <option value="$PROJECT_DIR$/templates/forms.html" />
-        <option value="$PROJECT_DIR$/app_dir/main/generated_functions.py" />
-        <option value="$PROJECT_DIR$/app_dir/main/views.py" />
-        <option value="$PROJECT_DIR$/templates/result.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="985" />
     <option name="width" value="942" />
     <option name="height" value="1087" />
@@ -230,7 +259,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,18 +269,13 @@
             <path>
               <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
               <item name="middleware" type="462c0819:PsiDirectoryNode" />
-              <item name="configurations" type="462c0819:PsiDirectoryNode" />
+              <item name="app_dir" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
               <item name="middleware" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="mailbox" type="462c0819:PsiDirectoryNode" />
+              <item name="app_dir" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="middleware" type="b2602c69:ProjectViewProjectNode" />
@@ -263,6 +286,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,6 +303,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\middleware\app_dir\main" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Workspace\middleware" />
       <recent name="D:\Workspace\middleware\static\js\generators" />
@@ -343,11 +370,13 @@
       <workItem from="1564811927930" duration="3555000" />
       <workItem from="1564842748059" duration="1838000" />
       <workItem from="1564925675742" duration="22429000" />
+      <workItem from="1565014537694" duration="42071000" />
+      <workItem from="1565105348831" duration="4701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82013000" />
+    <option name="totallyTimeSpent" value="128785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,13 +391,13 @@
     <frame x="56" y="-8" width="1872" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20584989" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25165564" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49944812" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" visible="true" weight="0.5117021" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49779248" visible="true" weight="0.2968085" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
@@ -389,38 +418,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-do_it.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-weather.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-FirstAPI_Get.js" />
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-temperature_checker.js" />
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-lowersensor.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-Read.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-Search.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-recipe_puppy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-cricket.js" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -462,20 +459,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/last_mailbox.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-newspaper_headlines.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-newspaper_headlines.js" />
     <entry file="file://$PROJECT_DIR$/last_sensor_actuator.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -489,37 +473,6 @@
           <caret line="3" column="60" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="60" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sensor_declaration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/actuator_declaration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/api_declaration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/email_declaration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mailbox_declaration.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-custom_if.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -539,13 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/meta_block_declaration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -576,54 +522,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/serializers.py">
+    <entry file="file://$PROJECT_DIR$/templates/interactive_declaration.html" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/eud/Lib/site-packages/google_auth_oauthlib/flow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="2992">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configurations/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/python3.5/site-packages/django/contrib/auth/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/last_api.txt">
+    <entry file="file://$PROJECT_DIR$/app_dir/main/form+creator.py" />
+    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-test333.js" />
+    <entry file="file://$PROJECT_DIR$/templates/actuator_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/function_writer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="107" column="16" lean-forward="true" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/interactive_block_declaration.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/interactive_declaration.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="354" column="2" selection-start-line="354" selection-start-column="2" selection-end-line="354" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js_declaration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -634,85 +563,157 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/last_mailbox.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/generators/codegenerator-first_interactive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="201" column="41" lean-forward="true" selection-start-line="201" selection-start-column="11" selection-end-line="201" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/function_writer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="107" column="16" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_dir/main/block_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        <state relative-caret-position="17">
+          <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configurations/settings.py">
+    <entry file="file://$PROJECT_DIR$/app_dir/main/conditional_forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/app_dir/main/app_creator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/python3.5/site-packages/django/contrib/auth/forms.py">
+    <entry file="file://$PROJECT_DIR$/templates/email_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="164" column="35" lean-forward="true" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
+        <state relative-caret-position="51">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/interactive_block_declaration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/form_creator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-407">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="341" selection-start-line="341" selection-end-line="341" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/post_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_dir/main/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="364">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/eud/Lib/site-packages/google_auth_oauthlib/flow.py">
+    <entry file="file://$PROJECT_DIR$/templates/api_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/blocks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="511">
+          <caret line="258" column="2" selection-start-line="258" selection-start-column="2" selection-end-line="258" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/js_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_dir/main/generated_functions.py">
+    <entry file="file://$PROJECT_DIR$/templates/mailbox_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/forms.html">
+    <entry file="file://$PROJECT_DIR$/templates/meta_block_declaration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -720,6 +721,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sensor_declaration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/last_api.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_dir/main/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#pre#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>

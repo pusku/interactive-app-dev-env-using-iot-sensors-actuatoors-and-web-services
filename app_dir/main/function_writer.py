@@ -100,7 +100,7 @@ def interactive_function_writer(function_name, api_fields):
         fields += "param" + str(i) + " = param" + str(i) + "\n    "
     final_param = parameter.rstrip(',')
 
-    file = open("app_dir/main/generated_functions.py", "a+")
+    file = open("app_dir/main/app_creator.py", "a+")
     code = """
 def """ + function_name + """(""" + final_param + """):
     """ + fields

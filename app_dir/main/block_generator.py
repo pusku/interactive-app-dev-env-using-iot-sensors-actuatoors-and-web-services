@@ -172,6 +172,11 @@ def declaration(block_name, block_type):
         f.write('\n' + "<block type=" + '"' + block_name + '"' + "></block>")
         f.close()
 
+    if block_type == 'api':
+        f = open("templates/api_declaration.html", "a+")
+        f.write('\n' + "<block type=" + '"' + block_name + '"' + "></block>")
+        f.close()
+
 
 def js_generator(block_name, block_type):
     f = open("static/js/generators/codegenerator-" + block_name + ".js", "w+")
@@ -240,27 +245,27 @@ def js_declaration(block_name):
     f.close()
 
 
-def form_creator(action, form_type):
-    if form_type != "conditional":
-        html = """<div class ="container">
-            <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
-                <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
-                { % csrf_token %}
-                { % bootstrap_form form %}
-                { % buttons %}
-                    < button type = "submit" class ="btn btn-primary" > Submit < / button >
-                { % endbuttons %}
-            < / form >
-        < / div >"""
-    else:
-        html = """<div class ="container">
-                   <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
-                       <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
-                       { % csrf_token %}
-                       { % bootstrap_form form %}
-                       { % buttons %}
-                           < button type = "submit" class ="btn btn-primary" > Submit < / button >
-                       { % endbuttons %}
-                   < / form >
-               < / div >"""
-    return html
+# def form_creator(action, form_type):
+#     if form_type != "conditional":
+#         html = """<div class ="container">
+#             <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
+#                 <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
+#                 { % csrf_token %}
+#                 { % bootstrap_form form %}
+#                 { % buttons %}
+#                     < button type = "submit" class ="btn btn-primary" > Submit < / button >
+#                 { % endbuttons %}
+#             < / form >
+#         < / div >"""
+#     else:
+#         html = """<div class ="container">
+#                    <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
+#                        <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
+#                        { % csrf_token %}
+#                        { % bootstrap_form form %}
+#                        { % buttons %}
+#                            < button type = "submit" class ="btn btn-primary" > Submit < / button >
+#                        { % endbuttons %}
+#                    < / form >
+#                < / div >"""
+#     return html
