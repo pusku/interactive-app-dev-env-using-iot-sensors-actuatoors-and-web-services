@@ -317,30 +317,48 @@ def custom_if_else(param0, param1, param2):
 
 def api_creator(param0, param1, param2, param3):
     url = 'http://127.0.0.1:8000/api/api/'
-
+    second_url = 'http://127.0.0.1:8000/api/service_registry/'
     data = {
         "name": param0,
         "api": param1,
         "fields": param2,
         "connection": param3
     }
+    data2 = {
+        "name": param0,
+        "service_type": 'api'
+    }
     requests.post(url, data=data)
+    requests.post(second_url, data=data2)
+
     return "API Created Successfully!"
     # print(response.text)
 
 
 def interactive_creator(param0, param1):
     url = 'http://127.0.0.1:8000/api/interactive/'
+    second_url = 'http://127.0.0.1:8000/api/service_registry/'
 
     data = {
         "name": param0,
         "fields": param1,
     }
+    data2 = {
+        "name": param0,
+        "service_type": 'interactive'
+    }
     requests.post(url, data=data)
+    requests.post(second_url, data=data2)
     return "Interactive Block Created Successfully!"
 
 
-def newspaper_headlines_reader(param0,param1,param2):
-    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+def newspaper_headlines_reader(param0, param1, param2):
+    data = requests.get(
+        " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    return data
+
+
+def recipe_puppy(param0, param1, param2):
+    data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
     print(data)
     return data

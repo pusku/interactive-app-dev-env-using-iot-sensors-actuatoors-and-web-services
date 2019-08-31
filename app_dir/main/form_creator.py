@@ -1,3 +1,23 @@
+def sensor_interface_creator(function_name):
+    form_file = open("app_dir/main/forms.py", "a+")
+    form = """\n\n def """ + function_name + """("""  """):
+        code = <pre style="width: 100%; height:100px" id='""" + function_name + """_result'>""" + """Sensor Data Received</pre>
+        return code
+        """
+    form_file.write(form)
+    form_file.close()
+
+
+def actuator_interface_creator(function_name):
+    form_file = open("app_dir/main/forms.py", "a+")
+    form = """\n\n def """ + function_name + """():
+        code = <pre style="width: 100%; height:100px" id='""" + function_name + """_result'>""" + """Actuator Triggered</pre>
+        return code
+        """
+    form_file.write(form)
+    form_file.close()
+
+
 def api_form_creator(function_name, api_fields):
     fields = ""
     result = api_fields.split(',')

@@ -243,29 +243,3 @@ def js_declaration(block_name):
     f = open("templates/js_declaration.html", "a+")
     f.write("""\n\n<script src="{% static  'js/generators/codegenerator-""" + block_name + """.js' %}"></script>""")
     f.close()
-
-
-# def form_creator(action, form_type):
-#     if form_type != "conditional":
-#         html = """<div class ="container">
-#             <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
-#                 <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
-#                 { % csrf_token %}
-#                 { % bootstrap_form form %}
-#                 { % buttons %}
-#                     < button type = "submit" class ="btn btn-primary" > Submit < / button >
-#                 { % endbuttons %}
-#             < / form >
-#         < / div >"""
-#     else:
-#         html = """<div class ="container">
-#                    <form action = "{% url '""" + action + """' %}" method = "POST" class ="form">
-#                        <input type = "hidden" name = "patient_id" value = "{{patient.patient_id}}" / >
-#                        { % csrf_token %}
-#                        { % bootstrap_form form %}
-#                        { % buttons %}
-#                            < button type = "submit" class ="btn btn-primary" > Submit < / button >
-#                        { % endbuttons %}
-#                    < / form >
-#                < / div >"""
-#     return html

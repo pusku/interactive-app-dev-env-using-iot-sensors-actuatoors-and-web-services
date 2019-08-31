@@ -11,6 +11,7 @@ def """ + function_name + """(motor_status):
         }
     response = requests.post(url, data=data)
     print(response.text)
+    return response.text
     
     
 """

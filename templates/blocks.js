@@ -23,7 +23,16 @@ Blockly.Blocks['weather'] = {
     }
 };
 //weather block end
-
+Blockly.Blocks['location'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("Location");
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
 //motor block start
 Blockly.Blocks['motor-on'] = {
     init: function () {
@@ -285,6 +294,24 @@ Blockly.Blocks['newspaper_headlines_reader'] = {
            this.appendValueInput("param1")
                   .setCheck(null);
             this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
+         
+             Blockly.Blocks['recipe_puppy'] = {
+                init: function() {
+               this.appendValueInput("param0")
+                      .setCheck(null)
+                      .setAlign(Blockly.ALIGN_CENTRE)
+                    .appendField('recipe_puppy i');
+                   this.appendValueInput("param1")
+                          .setCheck(null)
+                    .appendField('q');
+                    this.appendValueInput("param2")
+                          .setCheck(null)
+                    .appendField('p');
+                    this.setOutput(true, null);this.setColour(230);
               this.setTooltip("");
               this.setHelpUrl("");
               }

@@ -247,3 +247,8 @@ def newspaper_headlines_reader(request):
         "param1"] + "&sortBy=" + request.POST["param2"] + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
     print(data)
     return JsonResponse({'code': data})
+
+def recipe_puppy(request):
+    data = requests.get(" http://www.recipepuppy.com/api/?i=" + request.POST["param0"] + "&q=" + request.POST["param1"] + "&p=" + request.POST["param2"] + " ").json()
+    print(data)
+    return JsonResponse({'code': data})

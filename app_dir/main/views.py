@@ -1,39 +1,19 @@
-from django.contrib.auth import forms
 from django.shortcuts import render
 from rest_framework import viewsets, generics
 from .serializers import *
 from .models import *
 from django.db.models import Q
-from django.http import HttpResponse, JsonResponse
-import requests
 from app_dir.main import function_writer, block_generator, form_creator
 from app_dir.main.generated_functions import *
 import ast
 import copy
 
-from django.views.generic import CreateView
-
-
-def new_form(request):
-    return render(request, 'forms.html')
-
-
-def save_form(request):
-    if request.method == "POST":
-        print(request.POST['myfile'])
-        data = Label(request.POST['myfile'])
-
-        context = {'bank': data}
-        print(context['bank'][0])
-        return render(request, 'result.html', context)
-
 
 def home(request):
-    # Sensor and Actuators Creator
     all_service = requests.get("http://127.0.0.1:8000/api/service_registry/").json()
     if len(all_service) > 0:
         last_service = all_service[-1]
-        read_file = open('last_sensor_actuator.txt', 'r')
+        read_file = open('registry.txt', 'r')
         a = read_file.read()
         read_file.close()
         name_id = last_service['name']
@@ -41,82 +21,47 @@ def home(request):
         name_id = name_id.replace(".", "_")
 
         if int(a) < last_service['id']:
-            write_file = open('last_sensor_actuator.txt', 'w+')
+            write_file = open('registry.txt', 'w+')
             write_file.write(str(last_service['id']))
             write_file.close()
             if last_service['service_type'] == 'sensor':
                 function_writer.sensor_function_writer(name_id, sensor_tag)
                 block_generator.block_generator(name_id, last_service['service_type'])
+                form_creator.sensor_interface_creator(name_id)
 
             elif last_service['service_type'] == 'actuator':
                 function_writer.actuator_function_writer(name_id, sensor_tag)
                 block_generator.block_generator(name_id, last_service['service_type'])
-                url = 'http://127.0.0.1:8000/api/actuators/'
-                data = {
-                    "topic": name_id,
-                    "value": "null",
-                    "time": "null",
-                    "name": "1"
-                }
-                requests.post(url, data=data)
+                form_creator.actuator_interface_creator(name_id)
 
-    # MailBox Creator
-    mailboxes = MailBox.objects.all()
-    mailbox_len = mailboxes.count()
-    if mailbox_len > 0:
-        last_mailbox = mailboxes[mailbox_len - 1]
-        read_mailbox = open('last_mailbox.txt', 'r')
-        mailbox_a = read_mailbox.read()
-        read_mailbox.close()
-        mailbox_name = last_mailbox.name
-        mailbox_tag = last_mailbox.api
-        mailbox_name = mailbox_name.replace(".", "_")
-        if int(mailbox_a) < last_mailbox.id:
-            write_file = open('last_mailbox.txt', 'w+')
-            write_file.write(str(last_mailbox.id))
-            write_file.close()
-            function_writer.mailbox_function_writer(mailbox_name, mailbox_tag.name)
-            block_generator.block_generator(mailbox_name, 'mailbox')
+            elif last_service['service_type'] == 'mailbox':
+                last_mailbox = MailBox.objects.get(name=name_id)
+                mailbox_name = last_mailbox.name
+                mailbox_path = last_mailbox.api
+                mailbox_name = mailbox_name.replace(".", "_")
+                function_writer.mailbox_function_writer(mailbox_name, mailbox_path)
+                block_generator.block_generator(mailbox_name, 'mailbox')
 
-    # API Creator
-    api = requests.get("http://127.0.0.1:8000/api/api/").json()
-    if len(api) > 0:
-        last_api = api[-1]
-        read_api = open('last_api.txt', 'r')
-        api_a = read_api.read()
-        read_api.close()
-        api_name = last_api['name']
-        api_link = last_api['api']
-        api_fields = last_api['fields']
-        api_connection = last_api['connection']
-        api_name = api_name.replace(".", "_")
-        if int(api_a) < last_api['id']:
-            write_file = open('last_api.txt', 'w+')
-            write_file.write(str(last_api['id']))
-            write_file.close()
-            function_writer.api_function_writer(api_name, api_link, api_fields)
-            block_generator.api_block_generator(api_name, 'api', api_fields, api_connection)
-            form_creator.api_form_creator(api_name, api_fields)
-            form_creator.url_creator(api_name)
-            form_creator.post_function_creator(api_name, api_link, api_fields)
+            elif last_service['service_type'] == 'api':
+                last_api = API.objects.get(name=name_id)
+                api_name = last_api.name
+                api_link = last_api.api
+                api_fields = last_api.fields
+                api_connection = last_api.connection
+                api_name = api_name.replace(".", "_")
+                function_writer.api_function_writer(api_name, api_link, api_fields)
+                block_generator.api_block_generator(api_name, 'api', api_fields, api_connection)
+                form_creator.api_form_creator(api_name, api_fields)
+                form_creator.url_creator(api_name)
+                form_creator.post_function_creator(api_name, api_link, api_fields)
 
-    # Interactive Creator
-    interactive = requests.get("http://127.0.0.1:8000/api/interactive/").json()
-    if len(interactive) > 0:
-        last_interactive = interactive[-1]
-        read_interactive = open('last_interactive.txt', 'r')
-        interactive_a = read_interactive.read()
-        read_interactive.close()
-        interactive_name = last_interactive['name']
-        interactive_fields = last_interactive['fields']
-        print(interactive_fields)
-        interactive_name = interactive_name.replace(".", "_")
-        if int(interactive_a) < last_interactive['id']:
-            write_file = open('last_interactive.txt', 'w+')
-            write_file.write(str(last_interactive['id']))
-            write_file.close()
-            function_writer.interactive_function_writer(interactive_name, interactive_fields)
-            block_generator.interactive_block_generator(interactive_name, 'interactive', interactive_fields)
+            elif last_service['service_type'] == 'interactive':
+                last_interactive = Interactive.objects.get(name=name_id)
+                interactive_name = last_interactive.name
+                interactive_fields = last_interactive.fields
+                interactive_name = interactive_name.replace(".", "_")
+                function_writer.interactive_function_writer(interactive_name, interactive_fields)
+                block_generator.interactive_block_generator(interactive_name, 'interactive', interactive_fields)
 
     return render(request, 'index.html')
 
@@ -166,10 +111,10 @@ class ActuatorListApiView(generics.ListAPIView):
         return qs
 
 
-def convertExpr2Expression(Expr):
-    Expr.lineno = 0
-    Expr.col_offset = 0
-    result = ast.Expression(Expr.value, lineno=0, col_offset=0)
+def convert_expr_expression(expr):
+    expr.lineno = 0
+    expr.col_offset = 0
+    result = ast.Expression(expr.value, lineno=0, col_offset=0)
 
     return result
 
@@ -185,17 +130,15 @@ def exec_with_return(code):
 
     exec(compile(init_ast, "<ast>", "exec"), globals())
     if type(last_ast.body[0]) == ast.Expr:
-        return eval(compile(convertExpr2Expression(last_ast.body[0]), "<ast>", "eval"), globals())
+        return eval(compile(convert_expr_expression(last_ast.body[0]), "<ast>", "eval"), globals())
     else:
         exec(compile(last_ast, "<ast>", "exec"), globals())
 
 
-def get_motor_status(request):
+def eud_code(request):
     if request.is_ajax():
         code = request.POST['code']
-
         result = exec_with_return(code)
-        print(result)
     else:
         return HttpResponse('Use ajax format!')
 

@@ -159,7 +159,7 @@
             var code = Blockly.Python.workspaceToCode(demoWorkspace);
             $.ajax({
                 type: 'POST',
-                url: "/get_motor_status/",
+                url: "/eud_code/",
                 headers: {
                     "X-CSRFToken": $("input[name=csrfmiddlewaretoken]").val()
                 },
