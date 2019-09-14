@@ -18,10 +18,9 @@ urlpatterns = [
     path('', views.home, name='home_url'),
     path('api/', include(router.urls)),
     path('Label/', post_functions.Label, name='Label'),
-
-path('newspaper_headlines_reader/', post_functions.newspaper_headlines_reader, name='newspaper_headlines_reader'),
-
-path('recipe_puppy/', post_functions.recipe_puppy, name='recipe_puppy'),    path('Read/', post_functions.Read, name='Read'),
+    path('recipe_puppy/', post_functions.recipe_puppy, name='recipe_puppy'),
+    path('newspaper_headlines/', post_functions.newspaper_headlines, name='newspaper_headlines'),
+    path('Read/', post_functions.Read, name='Read'),
     path('Search/', post_functions.Search, name='Search'),
     path('Send/', post_functions.Send, name='Send'),
     path('weather_info/', post_functions.weather_info, name='weather_info'),

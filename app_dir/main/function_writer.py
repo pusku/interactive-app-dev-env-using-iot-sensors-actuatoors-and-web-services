@@ -47,7 +47,7 @@ def """ + function_name + """():
     path = """ + "'" + tag + "'" + """
     result = path.split('/')
     print(result)
-    return result
+    return result[1]
     
     """
     file.write(code)

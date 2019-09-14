@@ -9,22 +9,6 @@ import copy
 import os
 
 
-def first_interactive(param0, param1, param2):
-    param0 = param0
-    os.remove("templates/app.html")
-    f = open("templates/app.html", "a+")
-    f.write(param0)
-    f.close()
-    param1 = param1
-    f = open("templates/app.html", "a+")
-    f.write(param1)
-    f.close()
-    param2 = param2
-    f = open("templates/app.html", "a+")
-    f.write(param2)
-    f.close()
-
-
 def convertExpr2Expression(Expr):
     Expr.lineno = 0
     Expr.col_offset = 0
@@ -59,10 +43,8 @@ def create_app(request):
     return JsonResponse({'code': result})
 
 
-def second_interactive_block(param0, param1):
+def custom_app(param0, param1, param2, param3):
     param0 = param0
-    print(param0)
-    print(param0)
     os.remove("templates/app.html")
     f = open("templates/app.html", "a+")
     f.write(param0)
@@ -71,5 +53,15 @@ def second_interactive_block(param0, param1):
     param1 = param1
     f = open("templates/app.html", "a+")
     f.write(param1)
+    f.close()
+    f.close()
+    param2 = param2
+    f = open("templates/app.html", "a+")
+    f.write(param2)
+    f.close()
+    f.close()
+    param3 = param3
+    f = open("templates/app.html", "a+")
+    f.write(param3)
     f.close()
     f.close()

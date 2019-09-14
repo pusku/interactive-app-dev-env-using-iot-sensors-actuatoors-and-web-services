@@ -34,14 +34,6 @@ def home(request):
                 block_generator.block_generator(name_id, last_service['service_type'])
                 form_creator.actuator_interface_creator(name_id)
 
-            elif last_service['service_type'] == 'mailbox':
-                last_mailbox = MailBox.objects.get(name=name_id)
-                mailbox_name = last_mailbox.name
-                mailbox_path = last_mailbox.api
-                mailbox_name = mailbox_name.replace(".", "_")
-                function_writer.mailbox_function_writer(mailbox_name, mailbox_path)
-                block_generator.block_generator(mailbox_name, 'mailbox')
-
             elif last_service['service_type'] == 'api':
                 last_api = API.objects.get(name=name_id)
                 api_name = last_api.name
@@ -62,6 +54,24 @@ def home(request):
                 interactive_name = interactive_name.replace(".", "_")
                 function_writer.interactive_function_writer(interactive_name, interactive_fields)
                 block_generator.interactive_block_generator(interactive_name, 'interactive', interactive_fields)
+
+    # MailBox Creator
+    mailboxes = MailBox.objects.all()
+    mailbox_len = mailboxes.count()
+    if mailbox_len > 0:
+        last_mailbox = mailboxes[mailbox_len - 1]
+        read_mailbox = open('mailbox.txt', 'r')
+        mailbox_a = read_mailbox.read()
+        read_mailbox.close()
+        mailbox_name = last_mailbox.name
+        mailbox_tag = last_mailbox.api
+        mailbox_name = mailbox_name.replace(".", "_")
+        if int(mailbox_a) < last_mailbox.id:
+            write_file = open('mailbox.txt', 'w+')
+            write_file.write(str(last_mailbox.id))
+            write_file.close()
+            function_writer.mailbox_function_writer(mailbox_name, mailbox_tag.name)
+            block_generator.block_generator(mailbox_name, 'mailbox')
 
     return render(request, 'index.html')
 

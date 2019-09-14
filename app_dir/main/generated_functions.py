@@ -266,13 +266,6 @@ def print_content(what_to_print):
     return result
 
 
-def rajon():
-    path = 'mailbox/credentials.json'
-    result = path.split('/')
-    print(result[1])
-    return result[1]
-
-
 import ast
 import copy
 
@@ -351,10 +344,16 @@ def interactive_creator(param0, param1):
     requests.post(second_url, data=data2)
     return "Interactive Block Created Successfully!"
 
+def recipe_puppy(param0, param1, param2):
+    data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
+    print(data)
+    return data
 
-def newspaper_headlines_reader(param0, param1, param2):
+
+def newspaper_headlines(param0, param1, param2):
     data = requests.get(
         " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    print(data)
     return data
 
 
@@ -362,3 +361,10 @@ def recipe_puppy(param0, param1, param2):
     data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
     print(data)
     return data
+
+
+def rajon():
+    path = 'mailbox/credentials_TSfRAvZ.json'
+    result = path.split('/')
+    print(result)
+    return result[1]
