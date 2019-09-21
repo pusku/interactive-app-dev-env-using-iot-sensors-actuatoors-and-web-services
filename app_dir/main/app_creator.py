@@ -43,7 +43,7 @@ def create_app(request):
     return JsonResponse({'code': result})
 
 
-def custom_app(param0, param1, param2, param3):
+def custom_app(param0, param1, param2):
     param0 = param0
     os.remove("templates/app.html")
     f = open("templates/app.html", "a+")
@@ -58,10 +58,5 @@ def custom_app(param0, param1, param2, param3):
     param2 = param2
     f = open("templates/app.html", "a+")
     f.write(param2)
-    f.close()
-    f.close()
-    param3 = param3
-    f = open("templates/app.html", "a+")
-    f.write(param3)
     f.close()
     f.close()

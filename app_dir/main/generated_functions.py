@@ -222,7 +222,9 @@ def weather_info(city):
     api_key = "bd27419d66c8678613e978ca561ad3f7"
     url = "http://api.openweathermap.org/data/2.5/forecast?APPID={}".format(api_key) + "&q=" + city
     data = requests.get(url).json()
-    data = (data['list'][0]['main']['temp'])
+    print(data)
+    # data = (data['list'][0]['main']['temp'])
+    data = data['list'][0]['weather'][0]['main']
     return data
 
 
@@ -343,28 +345,29 @@ def interactive_creator(param0, param1):
     requests.post(url, data=data)
     requests.post(second_url, data=data2)
     return "Interactive Block Created Successfully!"
+def newspaper_headlines(param0,param1,param2):
+    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    print(data)
+    return data
 
-def recipe_puppy(param0, param1, param2):
+def recipe_puppy(param0,param1,param2):
     data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
     print(data)
     return data
 
-
-def newspaper_headlines(param0, param1, param2):
-    data = requests.get(
-        " https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+def cricket(param0,param1,param2):
+    data = requests.get(" https://dev132-cricket-live-scores-v1.p.rapidapi.com/matches.php?completedlimit=" + param0 + "&inprogresslimit=" + param1 + "&upcomingLimit=" + param2 + "&appid=dc0613934dmsh24f397f54e7f03bp19870ejsncb99ec04982d ").json()
     print(data)
     return data
 
-
-def recipe_puppy(param0, param1, param2):
-    data = requests.get(" http://www.recipepuppy.com/api/?i=" + param0 + "&q=" + param1 + "&p=" + param2 + " ").json()
+def doctor(param0,param1,param2):
+    data = requests.get(" https://api.betterdoctor.com/2016-03-01/doctors?location=" + param0 + "&skip=" + param1 + "&limit=" + param2 + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
     print(data)
     return data
 
 
 def rajon():
-    path = 'mailbox/credentials_TSfRAvZ.json'
+    path = 'mailbox/credentials.json'
     result = path.split('/')
     print(result)
     return result[1]

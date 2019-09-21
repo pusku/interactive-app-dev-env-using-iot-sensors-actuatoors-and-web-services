@@ -238,20 +238,25 @@ def weather_info(request):
     api_key = "bd27419d66c8678613e978ca561ad3f7"
     url = "http://api.openweathermap.org/data/2.5/forecast?APPID={}".format(api_key) + "&q=" + city
     data = requests.get(url).json()
-    data = (data['list'][0]['main']['temp'])
+    # data = (data['list'][0]['main']['temp'])
+    data = data['list'][0]['weather'][0]['main']
     return JsonResponse({'code': data})
-
-
 def newspaper_headlines(request):
-    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + request.POST["param0"] + "&from=" + request.POST[
-        "param1"] + "&sortBy=" + request.POST["param2"] + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + request.POST["param0"] + "&from=" + request.POST["param1"] + "&sortBy=" + request.POST["param2"] + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
     print(data)
     return JsonResponse({'code': data})
 
-
 def recipe_puppy(request):
-    data = requests.get(
-        " http://www.recipepuppy.com/api/?i=" + request.POST["param0"] + "&q=" + request.POST["param1"] + "&p=" +
-        request.POST["param2"] + " ").json()
+    data = requests.get(" http://www.recipepuppy.com/api/?i=" + request.POST["param0"] + "&q=" + request.POST["param1"] + "&p=" + request.POST["param2"] + " ").json()
+    print(data)
+    return JsonResponse({'code': data})
+
+def cricket(request):
+    data = requests.get(" https://dev132-cricket-live-scores-v1.p.rapidapi.com/matches.php?completedlimit=" + request.POST["param0"] + "&inprogresslimit=" + request.POST["param1"] + "&upcomingLimit=" + request.POST["param2"] + "&appid=dc0613934dmsh24f397f54e7f03bp19870ejsncb99ec04982d ").json()
+    print(data)
+    return JsonResponse({'code': data})
+
+def doctor(request):
+    data = requests.get(" https://api.betterdoctor.com/2016-03-01/doctors?location=" + request.POST["param0"] + "&skip=" + request.POST["param1"] + "&limit=" + request.POST["param2"] + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
     print(data)
     return JsonResponse({'code': data})

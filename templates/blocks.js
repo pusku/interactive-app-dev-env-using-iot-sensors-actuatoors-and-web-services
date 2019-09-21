@@ -219,7 +219,6 @@ Blockly.Blocks['interactive_creator'] = {
         this.setHelpUrl("");
     }
 };
-
 Blockly.Blocks['newspaper_headlines'] = {
     init: function () {
         this.appendValueInput("param0")
@@ -258,6 +257,43 @@ Blockly.Blocks['recipe_puppy'] = {
     }
 };
 
+Blockly.Blocks['cricket'] = {
+    init: function () {
+        this.appendValueInput("param0")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('cricket completedlimit');
+        this.appendValueInput("param1")
+            .setCheck(null)
+            .appendField('inprogresslimit');
+        this.appendValueInput("param2")
+            .setCheck(null)
+            .appendField('upcomingLimit');
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+
+Blockly.Blocks['doctor'] = {
+    init: function () {
+        this.appendValueInput("param0")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('doctor location');
+        this.appendValueInput("param1")
+            .setCheck(null)
+            .appendField('skip');
+        this.appendValueInput("param2")
+            .setCheck(null)
+            .appendField('limit');
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
 
 Blockly.Blocks['rajon'] = {
     init: function () {
@@ -271,21 +307,28 @@ Blockly.Blocks['rajon'] = {
     }
 };
 
-             Blockly.Blocks['custom_app'] = {
-                init: function() {
-               this.appendValueInput("param0")
-              .setCheck(null)
-              .setAlign(Blockly.ALIGN_CENTRE)
+Blockly.Blocks['custom_app'] = {
+    init: function () {
+        this.appendValueInput("param0")
+            .setCheck(null)
+            .setAlign(Blockly.ALIGN_CENTRE)
             .appendField('custom_app');
-           this.appendValueInput("param1")
-                  .setCheck(null);
-            this.appendValueInput("param2")
-                  .setCheck(null);
-            this.appendValueInput("param3")
-                  .setCheck(null);
-            this.setColour(230);
-              this.setTooltip("");
-              this.setHelpUrl("");
-              }
-            };
-         
+        this.appendValueInput("param1")
+            .setCheck(null);
+        this.appendValueInput("param2")
+            .setCheck(null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
+Blockly.Blocks['location'] = {
+    init: function () {
+        this.appendDummyInput()
+            .appendField("location");
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip("");
+        this.setHelpUrl("");
+    }
+};
