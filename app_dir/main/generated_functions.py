@@ -371,3 +371,8 @@ def rajon():
     result = path.split('/')
     print(result)
     return result[1]
+
+def news(param0,param1,param2):
+    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + param0 + "&from=" + param1 + "&sortBy=" + param2 + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    print(data)
+    return data

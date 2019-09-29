@@ -260,3 +260,8 @@ def doctor(request):
     data = requests.get(" https://api.betterdoctor.com/2016-03-01/doctors?location=" + request.POST["param0"] + "&skip=" + request.POST["param1"] + "&limit=" + request.POST["param2"] + "&user_key='CODE_SAMPLES_KEY_9d3608187' ").json()
     print(data)
     return JsonResponse({'code': data})
+
+def news(request):
+    data = requests.get(" https://newsapi.org/v2/top-headlines?q=" + request.POST["param0"] + "&from=" + request.POST["param1"] + "&sortBy=" + request.POST["param2"] + "&apiKey=0bd59e0fc1474b5caf16c806d5dffc9c ").json()
+    print(data)
+    return JsonResponse({'code': data})

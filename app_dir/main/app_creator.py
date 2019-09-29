@@ -60,3 +60,27 @@ def custom_app(param0, param1, param2):
     f.write(param2)
     f.close()
     f.close()
+
+
+def app_custom(param0, param1, param2, param3):
+    param0 = param0
+    os.remove("templates/app.html")
+    f = open("templates/app.html", "a+")
+    f.write(param0)
+    f.close()
+
+    param1 = param1
+    f = open("templates/app.html", "a+")
+    f.write(param1)
+    f.close()
+    f.close()
+    param2 = param2
+    f = open("templates/app.html", "a+")
+    f.write(param2)
+    f.close()
+    f.close()
+    param3 = param3
+    f = open("templates/app.html", "a+")
+    f.write(param3)
+    f.close()
+    f.close()

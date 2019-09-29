@@ -332,3 +332,39 @@ Blockly.Blocks['location'] = {
         this.setHelpUrl("");
     }
 };
+             Blockly.Blocks['news'] = {
+                init: function() {
+               this.appendValueInput("param0")
+                      .setCheck(null)
+                      .setAlign(Blockly.ALIGN_CENTRE)
+                    .appendField('news q');
+                   this.appendValueInput("param1")
+                          .setCheck(null)
+                    .appendField('from');
+                    this.appendValueInput("param2")
+                          .setCheck(null)
+                    .appendField('sortBy');
+                    this.setOutput(true, null);this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
+         
+             Blockly.Blocks['app_custom'] = {
+                init: function() {
+               this.appendValueInput("param0")
+              .setCheck(null)
+              .setAlign(Blockly.ALIGN_CENTRE)
+            .appendField('app_custom');
+           this.appendValueInput("param1")
+                  .setCheck(null);
+            this.appendValueInput("param2")
+                  .setCheck(null);
+            this.appendValueInput("param3")
+                  .setCheck(null);
+            this.setColour(230);
+              this.setTooltip("");
+              this.setHelpUrl("");
+              }
+            };
+         

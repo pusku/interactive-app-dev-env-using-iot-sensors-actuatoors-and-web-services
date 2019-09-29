@@ -21,6 +21,7 @@ urlpatterns = [
     path('Read/', post_functions.Read, name='Read'),
     path('Search/', post_functions.Search, name='Search'),
 
+path('news/', post_functions.news, name='news'),
 path('doctor/', post_functions.doctor, name='doctor'),
 path('cricket/', post_functions.cricket, name='cricket'),
 path('recipe_puppy/', post_functions.recipe_puppy, name='recipe_puppy'),

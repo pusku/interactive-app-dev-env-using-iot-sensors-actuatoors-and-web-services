@@ -322,3 +322,10 @@ def rajon():
     result = path.split('/')
     print(result)
     return result[1]
+
+
+
+def news(param0,param1,param2):
+    code = "<h1>news</h1><button class='btn btn-primary' onclick='news()'>Run</button><button class='btn btn-info' onclick='continuousnews()'>Run Continuously</button><button class='btn btn-danger' onclick='stopnews()'>Stop Continuous Run</button><form enctype='multipart/form-data' action='' method='post'>{% csrf_token %}<input class='form-control' type='text' name='param0' id='param0news' value=''/><input class='form-control' type='text' name='param1' id='param1news' value=''/><input class='form-control' type='text' name='param2' id='param2news' value=''/></form><script>function news(){var param0 = $('#param0news').val();var param1 = $('#param1news').val();var param2 = $('#param2news').val(); $.ajax({type: 'POST',url: '/news/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0,'param1': param1,'param2': param2},success: function (response) {console.log(response.code);document.getElementById('news_result').innerHTML = JSON.stringify(response.code, undefined,2);}});}var myVarnews;function continuousnews(){var param0 = $('#param0news').val();var param1 = $('#param1news').val();var param2 = $('#param2news').val(); $.ajax({type: 'POST',url: '/news/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0,'param1': param1,'param2': param2},success: function (response) {console.log(response.code);document.getElementById('news_result').innerHTML = JSON.stringify(response.code, undefined,2);}});myVarnews = setTimeout('continuousnews()', 100);}function stopnews() {clearTimeout(myVarnews);}</script><pre style='width: 100%; height:100px' id='news_result'></pre><script>function news() {var param0 = $('#param0news').val();$.ajax({type: 'POST',url: '/news/',headers: {'X-CSRFToken': $('input[name=csrfmiddlewaretoken]').val()},data: {'param0': param0},success: function (response) {console.log(response.code);document.getElementById('news_result').innerHTML = JSON.stringify(response.code, undefined, 2);});}</script>"
+    return code
+    
