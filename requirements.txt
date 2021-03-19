@@ -6,7 +6,7 @@ cssselect==1.0.3
 dj-database-url==0.5.0
 Django==2.2.3
 django-heroku==0.3.1
-djangorestframework==3.10.1
+djangorestframework==3.11.2
 feedfinder2==0.0.4
 feedparser==5.2.1
 freeze==1.0.10
